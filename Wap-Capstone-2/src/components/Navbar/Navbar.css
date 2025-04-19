@@ -1,0 +1,20 @@
+.navbar{
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 2vw;
+  background:linear-gradient(to right, #5850e9, #ac5ef5);
+}
+.nav_links a{
+  text-decoration: none;
+  margin: 0 2vw;
+  font-size: 1.3vw;
+  color: antiquewhite;
+}
+.nav_btn{
+  padding:1.8vh 2vh ;
+  background-color: #5850e9;
+  border: none;
+  border-radius: 1vw;
+
+}
