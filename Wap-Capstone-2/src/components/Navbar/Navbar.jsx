@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import homeMain from "../assets/homeMain.jpeg"; 
+import logo from "../../assets/logo.png"
 
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="nav_logo">
-          <h1>Auction</h1>
+          <img className="logo" src={logo} alt="" />
         </div>
         <div className="nav_links">
           <a href="#">Home</a>
@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="main_page">
-        <img src={homeMain} alt="" />
+        
       </div>
     </>
   );
