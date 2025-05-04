@@ -2,7 +2,7 @@ import React from 'react'
 
 const Explore = () => {
   return (
-    <div className="disply_flex  max-[432px]:flex-col p-10 border_stl">
+    <div className="disply_flex  max-[432px]:flex-col p-10  border_stl">
     <div>
       <h1>Start Your Real Estate Journey Today</h1>
       <p className="text-gray-500 my-5">

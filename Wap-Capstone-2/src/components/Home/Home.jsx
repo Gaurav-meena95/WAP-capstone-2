@@ -6,6 +6,7 @@ import unlock from "../../assets/unlock.png";
 import Properties from "../Properties/Properties";
 import Footer from "../Footer/Footer";
 import Explore from "../Explore/Explore";
+import Expirence from "../Expirence/Expirence";
 const Home = () => {
   return (
     <div className=" text-white">
@@ -27,20 +28,7 @@ const Home = () => {
               Browse Properties
             </button>
           </div>
-          <div className="disply_flex  my-10 mx-10">
-            <div className="w-1/3.9 p-4 border_stl bg-gray-800 max-[432px]:w-27">
-              <h1>200+</h1>
-              <p>Happy Customers</p>
-            </div>
-            <div className="w-1/3.9 p-4 border_stl bg-gray-800 max-[432px]:w-27">
-              <h1>10K</h1>
-              <p>Properties For Clients</p>
-            </div>
-            <div className="w-1/3.9 p-4 border_stl bg-gray-800 max-[432px]:w-27">
-              <h1>16+</h1>
-              <p>Years of Experience</p>
-            </div>
-          </div>
+          <Expirence/>
         </div>
         <div className=" w-1/2 mx-10 flex max-[432px]:w-full max-[432px]:my-10 bg-contain  ">
           <img

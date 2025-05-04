@@ -15,7 +15,7 @@
     @apply text-4xl  max-[432px]:text-2xl;
   }
   p{
-    @apply max-[432px]:text-xs
+    @apply text-gray-500 max-[432px]:text-xs
   }
 
   .border_stl {
