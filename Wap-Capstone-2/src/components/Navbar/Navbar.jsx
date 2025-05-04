@@ -10,12 +10,22 @@ const Navbar = () => {
           <h1 className="text-3xl">AuctionHub</h1>
         </div>
 
-        <div className=" disply_flex  mx-4 [*>&]:p-2 gap-12">
-          <a className="font-medium hover:bg-gray-600  " href="">Home</a>
-          <a className="font-medium hover:bg-gray-600  " href="">About Us</a>
-          <a className="font-medium hover:bg-gray-600  " href="">Properties</a>
-          <a className="font-medium hover:bg-gray-600  " href="">Services</a>
-          <a className="font-medium hover:bg-gray-600  " href="">Contact Us</a>
+        <div className="max-[432px]:hidden max-[768px]:hidden  md:flex lg:flex  mx-4 [*>&]:p-2 gap-12">
+          <a className="font-medium hover:bg-gray-600  " href="">
+            Home
+          </a>
+          <a className="font-medium hover:bg-gray-600  " href="">
+            About Us
+          </a>
+          <a className="font-medium hover:bg-gray-600  " href="">
+            Properties
+          </a>
+          <a className="font-medium hover:bg-gray-600  " href="">
+            Services
+          </a>
+          <a className="font-medium hover:bg-gray-600  " href="">
+            Contact Us
+          </a>
         </div>
 
         <img
@@ -25,15 +35,25 @@ const Navbar = () => {
           alt="Menu"
         />
 
-        {/* {isMenuOpen && (
+        {isMenuOpen && (
           <div className="md:hidden absolute top-16 left-0 w-full bg-black text-white shadow-md p-4 flex flex-col gap-4">
-            <a className="font-medium hover:bg-gray-600  " href="">Home</a>
-            <a className="font-medium hover:bg-gray-600  " href="">About Us</a>
-            <a className="font-medium hover:bg-gray-600  " href="">Properties</a>
-            <a className="font-medium hover:bg-gray-600  " href="">Services</a>
-            <a className="font-medium hover:bg-gray-600  " href="">Contact Us</a>
+            <a className="font-medium hover:bg-gray-600  " href="">
+              Home
+            </a>
+            <a className="font-medium hover:bg-gray-600  " href="">
+              About Us
+            </a>
+            <a className="font-medium hover:bg-gray-600  " href="">
+              Properties
+            </a>
+            <a className="font-medium hover:bg-gray-600  " href="">
+              Services
+            </a>
+            <a className="font-medium hover:bg-gray-600  " href="">
+              Contact Us
+            </a>
           </div>
-        )} */}
+        )}
       </div>
       <hr />
     </>

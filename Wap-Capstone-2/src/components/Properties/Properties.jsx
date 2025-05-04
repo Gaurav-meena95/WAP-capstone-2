@@ -3,14 +3,14 @@ import house from '../../assets/house.png'
 
 const Properties = () => {
   return (
-    <div className='border_stl p-5 '>
+    <div className='border_stl   p-5 '>
       <div>
         <img src={house} alt="" />
       </div>
 
       <div className='my-10'>
         <div className=''><h1>Seaside Serenity Villa</h1></div>
-        <div className='disply_flex my-10 '>
+        <div className='disply_flex  my-10 '>
           <span className='border_stl py-1 px-2'>3-bedroom</span>
           <span className='border_stl py-1 px-2'>2-Bathroom</span>
           <span className='border_stl py-1 px-2'>2-Bathroom</span>

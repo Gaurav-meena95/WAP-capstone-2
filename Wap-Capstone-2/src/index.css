@@ -1,22 +1,47 @@
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
 @layer components {
 
-  .disply_flex{
+  .disply_flex {
     @apply flex justify-between items-center ;
   }
-  .home_cont_2{
-    @apply bg-gray-900 w-1/4 m-2 text-center p-10 h-40  ;
+
+  .home_cont_2 {
+    @apply flex justify-center items-center flex-col bg-gray-900 w-1/4 m-2 text-center p-10 h-40;
   }
-  h1{
-    @apply text-4xl
+
+  h1 {
+    @apply text-4xl  max-[432px]:text-2xl
   }
-  .border_stl{
-    @apply border border-gray-600  rounded-xl;
+  p{
+    @apply max-[432px]:text-xs
   }
-  h2{
+
+  .border_stl {
+    @apply border border-gray-600 rounded-xl ;
+  }
+
+  h2 {
     @apply text-2xl text-gray-500
   }
+  .phone {
+    @apply max-[432px]:flex-wrap;
+  }
+  .grid_w{
+    @apply max-[432px]:w-full max-[432px]:h-50  ;
+  }
+  .phone_grid {
+    @apply max-[432px]:grid max-[432px]:grid-cols-2 max-[432px]:gap-3 mx-5 ;
+  }
+
 }
-:root{
+
+:root {
   background-color: rgb(0, 0, 0);
 }
