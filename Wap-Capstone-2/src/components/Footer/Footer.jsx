@@ -10,14 +10,15 @@ const Footer = () => {
     <div>
       <div>
         <div className="disply_flex  max-[432px]:flex-wrap  max-[432px]:my-10 my-10">
-          <div>
+          <div className="max-[432px]:flex-col">
             <h1>Aution Hub</h1>
             <input
-              className="border_stl my-5"
-              type="text"
+              className="border_stl my-5 py-3 px-10 w-80 block" 
+              type="email"
               placeholder="Enter Your Email"
+              required
             />
-            <button className="border_stl bg-purple-900 px-5">Send</button>
+            <button className="border_stl block bg-purple-900 px-10 py-2">Send</button>
           </div>
           <div className="flex  max-[432px]:flex-wrap  max-[432px]:my-10  gap-15">
             <div className="w-30">
@@ -57,7 +58,7 @@ const Footer = () => {
             <span>Terms & Conditions</span>
           </div>
 
-          <div className=" max-[432px]:my-20">
+          <div className=" max-[432px]:mt-15 mb-5">
             <span className="mx-5">
               <FontAwesomeIcon className="text-3xl" icon={faGithub} />
             </span>

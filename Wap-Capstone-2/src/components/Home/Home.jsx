@@ -78,16 +78,20 @@ const Home = () => {
               information.
             </p>
           </div>
-          <div>
-            <button className="border_stl p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs">View All Properties</button>
-          </div>
+          
         </div>
 
-        <div className="flex justify-around items-center phone  gap-1 ">
+        <div className="flex justify-around items-center phone  gap-1 max-[432px]:hidden ">
           <Properties  />
           <Properties />
           <Properties />
         </div>
+        <div className="min-[432px]:hidden flex justify-around items-center phone  gap-1 ">
+          <Properties  />
+        </div>
+        <div className="flex justify-center items-center my-10">
+            <button className="border_stl  p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs">View All Properties</button>
+          </div>
         <div className="my-10 mx-10">
           <Explore/>
           <Footer />
