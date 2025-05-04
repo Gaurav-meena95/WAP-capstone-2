@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --breakpoint-xs: 30rem;
-  --breakpoint-2xl: 100rem;
-  --breakpoint-3xl: 120rem;
-}
 
 @layer components {
 
@@ -17,7 +12,7 @@
   }
 
   h1 {
-    @apply text-4xl  max-[432px]:text-2xl
+    @apply text-4xl  max-[432px]:text-2xl;
   }
   p{
     @apply max-[432px]:text-xs
@@ -28,7 +23,7 @@
   }
 
   h2 {
-    @apply text-2xl text-gray-500
+    @apply text-2xl text-gray-500  max-[432px]:text-xl;
   }
   .phone {
     @apply max-[432px]:flex-wrap;
@@ -39,7 +34,9 @@
   .phone_grid {
     @apply max-[432px]:grid max-[432px]:grid-cols-2 max-[432px]:gap-3 mx-5 ;
   }
-
+  .proprty_btn{
+    @apply py-1 px-2   max-[432px]:text-[10px]  max-[432px]:mx-1;
+  }
 }
 
 :root {
