@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Footer/Footer'
-import Landing from './components/LandingPage/Landing'
 import About from './components/About/About'
+import Home from './components/Home/Home'
+
 
 function App() {
   const [left, setLeft] = useState(100)
@@ -10,9 +10,9 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Landing/>
+    <Home/>
     <About/>
-    <Footer/> 
+ 
     </>
   )
 }
