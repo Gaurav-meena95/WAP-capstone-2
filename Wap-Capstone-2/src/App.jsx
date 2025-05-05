@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About'
-import Home from './components/Home/Home'
+// import Home from './components/Home/Home'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Home/>
+    {/* <Home/> */}
     <About/>
  
     </>

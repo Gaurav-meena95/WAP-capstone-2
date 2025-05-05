@@ -37,6 +37,9 @@
   .proprty_btn{
     @apply py-1 px-2   max-[432px]:text-[10px]  max-[432px]:mx-1;
   }
+  .steps{
+    @apply shadow-lg shadow-purple-600/50 w-110 h-65 max-[432px]:flex-wrap  max-[432px]:w-90   border border-purple-900 rounded-b-md rounded-r-md p-5;
+  }
 }
 
 :root {
