@@ -11,19 +11,19 @@ const Navbar = () => {
         </div>
 
         <div className="max-[432px]:hidden max-[768px]:hidden  md:flex lg:flex  mx-4 [*>&]:p-2 gap-12">
-          <a className="font-medium hover:bg-gray-600  " href="">
+          <a className="navbarLine " href="">
             Home
           </a>
-          <a className="font-medium hover:bg-gray-600  " href="">
+          <a className="navbarLine " href="">
             About Us
           </a>
-          <a className="font-medium hover:bg-gray-600  " href="">
+          <a className="navbarLine " href="">
             Properties
           </a>
-          <a className="font-medium hover:bg-gray-600  " href="">
+          <a className="navbarLine " href="">
             Services
           </a>
-          <a className="font-medium hover:bg-gray-600  " href="">
+          <a className="navbarLine " href="">
             Contact Us
           </a>
         </div>
@@ -36,20 +36,20 @@ const Navbar = () => {
         />
 
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-black text-white shadow-md p-4 flex flex-col gap-4">
-            <a className="font-medium hover:bg-gray-600  " href="">
+          <div className="md:hidden absolute top-16 left-0 w-full bg-gray-800  text-white shadow-md p-4 flex flex-col gap-4">
+            <a className="navbarLine " href="">
               Home
             </a>
-            <a className="font-medium hover:bg-gray-600  " href="">
+            <a className="navbarLine " href="">
               About Us
             </a>
-            <a className="font-medium hover:bg-gray-600  " href="">
+            <a className="navbarLine " href="">
               Properties
             </a>
-            <a className="font-medium hover:bg-gray-600  " href="">
+            <a className="navbarLine " href="">
               Services
             </a>
-            <a className="font-medium hover:bg-gray-600  " href="">
+            <a className="navbarLine " href="">
               Contact Us
             </a>
           </div>
