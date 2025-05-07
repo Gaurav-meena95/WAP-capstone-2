@@ -31,7 +31,7 @@ const Home = () => {
           <Expirence/>
         </div>
         <div className=" w-1/2 mx-10 flex max-[432px]:w-full max-[432px]:my-10 bg-contain  ">
-          <img
+          <img className="rounded"
             src="https://wallpapers.com/images/hd/dark-luxury-house-and-tall-glass-windows-cll7wwtf2mmy19zu.jpg" alt="home img"
           />
         </div>

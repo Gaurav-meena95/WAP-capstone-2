@@ -36,7 +36,7 @@ const Navbar = () => {
         />
 
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-gray-800  text-white shadow-md p-4 flex flex-col gap-4">
+          <div className="md:hidden absolute top-16 left-0 w-full bg-gray-800   text-white shadow-md p-4 flex flex-col gap-4">
             <a className="navbarLine " href="">
               Home
             </a>
