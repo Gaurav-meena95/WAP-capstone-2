@@ -193,6 +193,79 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="team">
+        <div className="w-full mx-10 my-10">
+          <h1 className="my-10">Meet the Estatein Team</h1>
+          <p className="w-250 max-[432px]:w-80 max-[432px]:text-[16px]">At Estatein, our success is driven by the dedication and expertise of our team. Get to know the people behind our mission to make your real estate dreams a reality.</p>
+        </div>
+        <div className="profile flex gap-4 justify-center items-center  flex-wrap">
+          <div className="border_stl w-80">
+          <div className=" flex justify-center items-center ">
+              <img className="w-90 h-80 p-5" src="https://i.imghippo.com/files/Jgf5799eSI.png" alt="" />
+          </div>
+              <div className="  mx-10 mt-10   ">
+                <div className="text-center">
+                <h2 className="text-white  ">Max Mitchell</h2>
+                <p className="">Founder</p>
+              </div>
+              </div>
+              <div className=" flex items-center mx-5">
+                <input type="text" className="border border-gray-600 rounded-3xl my-5 py-2 px-10 w-full  block" placeholder="Say Hello"  />
+                <div className=" mx-[-40px] cursor-pointer rounded-r-xl"><img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" /></div>
+              </div>
+
+          </div>
+          <div className="border_stl w-80">
+          <div className=" flex justify-center items-center ">
+              <img className="w-90 h-80 p-5" src="https://i.imghippo.com/files/Ak4169HAo.png" alt="" />
+          </div>
+              <div className="  mx-10 mt-10   ">
+                <div className="text-center">
+                <h2 className="text-white  ">Sarah Johnson</h2>
+                <p className="">Chief Real Estate Officer</p>
+              </div>
+              </div>
+              <div className=" flex items-center mx-5">
+                <input type="text" className="border border-gray-600 rounded-3xl my-5 py-2 px-10 w-full  block" placeholder="Say Hello"  />
+                <div className=" mx-[-40px] cursor-pointer rounded-r-xl"><img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" /></div>
+              </div>
+
+          </div>
+          <div className="border_stl w-80">
+          <div className=" flex justify-center items-center ">
+              <img className="w-90 h-80 p-5" src="https://i.imghippo.com/files/nJBb5373VQ.png" alt="" />
+          </div>
+              <div className="  mx-10 mt-10   ">
+                <div className="text-center w-full">
+                <h2 className="text-white  ">David Brown</h2>
+                <p className="">Head of Property Managment</p>
+              </div>
+              </div>
+              <div className=" flex items-center mx-5">
+                <input type="text" className="border border-gray-600 rounded-3xl my-5 py-2 px-10 w-full  block" placeholder="Say Hello"  />
+                <div className=" mx-[-40px] cursor-pointer rounded-r-xl"><img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" /></div>
+              </div>
+
+          </div>
+          <div className="border_stl w-80">
+          <div className=" flex justify-center items-center ">
+              <img className="w-90 h-80 p-5" src="https://i.imghippo.com/files/wRvp8966NSU.png" alt="" />
+          </div>
+              <div className="  mx-10 mt-10   ">
+                <div className="text-center">
+                <h2 className="text-white  ">Michael Turner</h2>
+                <p className="">Legal Counsel</p>
+              </div>
+              </div>
+              <div className=" flex items-center mx-5">
+                <input type="text" className="border border-gray-600 rounded-3xl my-5 py-2 px-10 w-full  block" placeholder="Say Hello"  />
+                <div className=" mx-[-40px] cursor-pointer rounded-r-xl"><img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" /></div>
+              </div>
+
+          </div>
+          
+        </div>
+      </div>
 
       <div className="my-20 mx-10 max-[432px]:mx-10 max-[432px]:my-20 ">
         <Explore />
