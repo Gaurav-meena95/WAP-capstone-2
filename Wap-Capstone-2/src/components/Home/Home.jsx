@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import home from "../../assets/home2.png";
 import effort from "../../assets/effort.png";
 import smart from "../../assets/smart.png";
@@ -78,7 +78,7 @@ const Home = () => {
           <Properties  />
         </div>
         <div className="flex justify-center items-center my-10">
-            <button className="border_stl  p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs">View All Properties</button>
+            <button  className="border_stl  cursor-pointer  p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs">View All Properties</button>
           </div>
         <div className="my-10 mx-10">
           <Explore/>

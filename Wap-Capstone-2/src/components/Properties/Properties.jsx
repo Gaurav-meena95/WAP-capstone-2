@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import house from '../../assets/house.png'
 
 const Properties = () => {
@@ -21,7 +21,7 @@ const Properties = () => {
             <h1>$550,000</h1>
           </div>
           <div>
-            <button className='bg-purple-600 p-2 rounded mb-0'>View Property Details</button>
+            <button className='bg-purple-600 p-2 rounded mb-0 cursor-pointer'>View Property Details</button>
           </div>
         </div>
       </div>
