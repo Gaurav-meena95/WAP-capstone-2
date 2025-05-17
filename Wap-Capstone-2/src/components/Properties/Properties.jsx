@@ -3,7 +3,7 @@ import house from '../../assets/house.png'
 
 const Properties = () => {
   return (
-    <div className='border_stl  max-[432px]:w-90 max-[432px]:my-5  p-5 '>
+    <div className='border_stl my-5  max-[432px]:w-90 max-[432px]:my-5  p-5 '>
       <div>
         <img src={house} alt="" />
       </div>

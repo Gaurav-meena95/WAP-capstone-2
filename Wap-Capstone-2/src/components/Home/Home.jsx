@@ -36,6 +36,7 @@ const Home = () => {
           />
         </div>
       </div>
+      
       {/* this div for next four */}
       <div className="disply_flex  phone_grid my-10">
         <div className="home_cont_2 grid_w border_stl ">

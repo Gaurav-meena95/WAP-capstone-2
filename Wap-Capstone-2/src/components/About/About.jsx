@@ -2,6 +2,8 @@ import React from "react";
 import Explore from "../Explore/Explore";
 import Footer from "../Footer/Footer";
 import Expirence from "../Expirence/Expirence";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 const About = () => {
   return (
     <div className="text-white  ">
@@ -44,7 +46,7 @@ const About = () => {
           <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2   p-10">
             <div className="flex justify-start items-center gap-3">
               <img
-                src="https://i.imghippo.com/files/Crm7545Y.png"
+              src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container.png?updatedAt=1747466222733"
                 alt="Trust"
               />
               <h3>Trust</h3>
@@ -59,7 +61,7 @@ const About = () => {
           <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2  p-10">
             <div className="flex justify-start items-center gap-3">
               <img
-                src="https://i.imghippo.com/files/xQL4950fY.png"
+                src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container%20(1).png?updatedAt=1747466440350"
                 alt="Excellence"
               />
               <h3>Excellence</h3>
@@ -74,7 +76,7 @@ const About = () => {
           <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2  p-10">
             <div className="flex justify-start items-center gap-3">
               <img
-                src="https://i.imghippo.com/files/Qx9726Jw.png"
+                src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container%20(3).png?updatedAt=1747466595306"
                 alt="Client-Centric"
               />
               <h3>Client-Centric</h3>
@@ -89,7 +91,7 @@ const About = () => {
           <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2  p-10">
             <div className="flex justify-start items-center gap-3">
               <img
-                src="https://i.imghippo.com/files/Crm7545Y.png"
+              src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container.png?updatedAt=1747466222733"
                 alt="Our Commitment"
               />
               <h3>Our Commitment</h3>
@@ -219,7 +221,7 @@ const About = () => {
             <div className=" flex justify-center items-center ">
               <img
                 className="w-90 h-80 p-5 max-[432px]:h-70 "
-                src="https://i.imghippo.com/files/Jgf5799eSI.png"
+                src="https://ik.imagekit.io/iyp2cf0jo/Image%20(3).png?updatedAt=1747469176135"
                 alt=""
               />
             </div>
@@ -236,7 +238,7 @@ const About = () => {
                 placeholder="Say Hello"
               />
               <div className=" mx-[-40px] cursor-pointer rounded-r-xl">
-                <img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" />
+                <FontAwesomeIcon className="text-2xl text-purple-600" icon={faPaperPlane} />
               </div>
             </div>
           </div>
@@ -244,7 +246,7 @@ const About = () => {
             <div className=" flex justify-center items-center ">
               <img
                 className="w-90 h-80 p-5 max-[432px]:h-70"
-                src="https://i.imghippo.com/files/Ak4169HAo.png"
+                src="https://ik.imagekit.io/iyp2cf0jo/Image%20(6).png?updatedAt=1747469146296"
                 alt=""
               />
             </div>
@@ -261,7 +263,7 @@ const About = () => {
                 placeholder="Say Hello"
               />
               <div className=" mx-[-40px] cursor-pointer rounded-r-xl">
-                <img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" />
+                <FontAwesomeIcon className="text-2xl text-purple-600" icon={faPaperPlane} />
               </div>
             </div>
           </div>
@@ -269,7 +271,7 @@ const About = () => {
             <div className=" flex justify-center items-center ">
               <img
                 className="w-90 h-80 p-5 max-[432px]:h-70"
-                src="https://i.imghippo.com/files/nJBb5373VQ.png"
+                src="https://ik.imagekit.io/iyp2cf0jo/Image%20(5).png?updatedAt=1747469060851"
                 alt=""
               />
             </div>
@@ -286,7 +288,7 @@ const About = () => {
                 placeholder="Say Hello"
               />
               <div className=" mx-[-40px] cursor-pointer rounded-r-xl">
-                <img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" />
+                <FontAwesomeIcon className="text-2xl text-purple-600" icon={faPaperPlane} />
               </div>
             </div>
           </div>
@@ -294,7 +296,7 @@ const About = () => {
             <div className=" flex justify-center items-center ">
               <img
                 className="w-90 h-80 p-5 max-[432px]:h-70"
-                src="https://i.imghippo.com/files/wRvp8966NSU.png"
+                src="https://ik.imagekit.io/iyp2cf0jo/Image%20(7).png?updatedAt=1747469245145"
                 alt=""
               />
             </div>
@@ -311,7 +313,7 @@ const About = () => {
                 placeholder="Say Hello"
               />
               <div className=" mx-[-40px] cursor-pointer rounded-r-xl">
-                <img src="https://i.imghippo.com/files/Dw5319KA.png" alt="" />
+                <FontAwesomeIcon className="text-2xl text-purple-600" icon={faPaperPlane} />
               </div>
             </div>
           </div>
