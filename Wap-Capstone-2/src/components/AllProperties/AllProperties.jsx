@@ -1,11 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faMagnifyingGlass,faLocationDot, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faMagnifyingGlass,
+  faLocationDot,
+  faArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Footer/Footer";
 import Properties from "../Properties/Properties";
 import PropertyDetails from "../PropertyDetails/PropertyDetails";
 
-const  AllProperties = () => {
+const AllProperties = () => {
   return (
     <div className="text-white">
       <div className="p-10 mx-10 my-10  bg-[#0e1225b9] max-[432px]:mx-5 max-[432px]:p-5">
@@ -25,7 +30,7 @@ const  AllProperties = () => {
             placeholder="Search For A Property"
           />
           <button className="bg-purple-600 p-2.5 px-5 ml-[-70px] rounded-xl mb-0 cursor-pointer max-[432px]:">
-            <FontAwesomeIcon icon={faMagnifyingGlass} /> 
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
         <div className="bg-gray-900 p-4 rounded-lg disply_flex mt-10 mx-10 max-[432px]:flex-wrap max-[432px]:">
@@ -104,38 +109,37 @@ const  AllProperties = () => {
           <div className="p-10 mx-10 my-10 bg-[#0e1225b9] max-[432px]:px-5 max-[432px]:pt-1">
             <h1 className="my-10">Discover a World of Possibilities</h1>
             <p className="text-[15px]">
-            Our portfolio of properties is as diverse as your dreams. Explore the following categories to find the perfect property that resonates with your vision of home
+              Our portfolio of properties is as diverse as your dreams. Explore
+              the following categories to find the perfect property that
+              resonates with your vision of home
             </p>
           </div>
-          <div className="card">
+          <div className="my-10">
             <div className="flex  flex-wrap mx-10 justify-between items-center max-[432px]:hidden">
-              <Properties/>
-              <Properties/>
-              <Properties/>
+              <Properties />
+              <Properties />
+              <Properties />
             </div>
-            <div className="flex  flex-wrap mx-10 justify-between items-center ">
-              <Properties/>
+            <div className=" min-[432px]:hidden flex  flex-wrap mx-10 justify-between items-center ">
+              <Properties />
             </div>
-            <div className="flex justify-between items-center mx-15 my-10">
-              
+            <div className="mx-10 my-10">
               <div className=" flex justify-between gap-10">
-                <FontAwesomeIcon icon={faArrowLeft} />
+                <FontAwesomeIcon className="bg-gray-800 p-3 rounded-full" icon={faArrowLeft} />
                 <div>
-                <h3>01 of 10</h3>
-              </div>
-                <FontAwesomeIcon icon={faArrowRight} />
+                  <h3>01 of 10</h3>
+                </div>
+                <FontAwesomeIcon className="bg-gray-800 p-3 rounded-full" icon={faArrowRight} />
               </div>
             </div>
-
           </div>
         </div>
-        <div className="my-10">
-
-        <PropertyDetails/>
+        <div className="my-20">
+          <PropertyDetails />
         </div>
       </div>
       <div className="px-10">
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

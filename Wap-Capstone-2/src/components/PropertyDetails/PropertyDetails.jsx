@@ -14,8 +14,8 @@ import React from "react";
 
 const PropertyDetails = () => {
   return (
-    <div className="main">
-      <div className="disply_flex mx-10 bg-gray-950">
+    <div className="">
+      <div className="disply_flex my-10 mx-10 bg-gray-950 max-[432px]:flex-wrap">
         <div className="disply_flex gap-4">
           <h2 className="text-gray-200">Seaside Serenity Villa</h2>
           <FontAwesomeIcon icon={faLocationDot} />
@@ -27,13 +27,22 @@ const PropertyDetails = () => {
         </div>
       </div>
       <div className="flex justify-between p-10 mx-10 bg-gray-900">
+        <div>
         <img
           className="w-165"
           src="https://ik.imagekit.io/iyp2cf0jo/Image%20(8).png?updatedAt=1747477087897"
           alt=""
         />
+        </div>
+        <div className="hidden">
         <img
-          className="w-165"
+          className=" min-[432px]:hidden w-165"
+          src="https://ik.imagekit.io/iyp2cf0jo/Image%20(9).png?updatedAt=1747477267959"
+          alt=""
+        />
+        </div>
+        <img
+          className=" max-[432px]:hidden w-165"
           src="https://ik.imagekit.io/iyp2cf0jo/Image%20(9).png?updatedAt=1747477267959"
           alt=""
         />
@@ -48,7 +57,7 @@ const PropertyDetails = () => {
           <FontAwesomeIcon className="text-2xl" icon={faArrowRight} />
         </div>
       </div>
-      <div className="my-40 flex justify-center items-start mx-10">
+      <div className="my-40 flex justify-center items-start mx-10 max-[432px]:flex-wrap">
         <div className="w-1/2">
           <div className="mx-10 mb-10">
             <h1>Description</h1>
