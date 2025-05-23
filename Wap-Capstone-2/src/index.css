@@ -19,7 +19,7 @@
   }
 
   .border_stl {
-    @apply border border-gray-600 rounded-xl ;
+    @apply border border-gray-600 rounded-lg ;
   }
 
   h2 {

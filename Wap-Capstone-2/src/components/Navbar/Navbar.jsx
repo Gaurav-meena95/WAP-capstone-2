@@ -55,7 +55,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <hr />
     </>
   );
 };
