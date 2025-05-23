@@ -16,7 +16,6 @@ const PropertyForm = () => {
       </div>
       <div className="form">
         <form>
-          <div className="flex justify-between items-center p-10">
             <div className="flex flex-col">
               <label htmlFor="">Frist Name</label>
               <input
@@ -49,6 +48,7 @@ const PropertyForm = () => {
                 className="bg-[#484545d4] px-5 py-2 w-75 mt-2 "
               />
             </div>
+          <div className="flex justify-between items-center p-10">
           </div>
         </form>
       </div>
