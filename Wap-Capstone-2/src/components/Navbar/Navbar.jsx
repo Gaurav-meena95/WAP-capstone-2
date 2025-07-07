@@ -1,60 +1,65 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import humburger from "../../assets/Icon.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsmenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path ? "text-blue-400" : "";
+  };
+
   return (
     <>
-      <div className="bg-gray-800 text-white disply_flex relative p-5 ">
-        <div className="mx-4">
-          <h1 className="text-3xl">AuctionHub</h1>
-        </div>
-
-        <div className="max-[432px]:hidden max-[768px]:hidden  md:flex lg:flex  mx-4 [*>&]:p-2 gap-12">
-          <a className="navbarLine " href="">
+      <nav className="w-full px-4 py-2 flex items-center justify-between bg-gray-900">
+        <div className="text-xl font-bold">AuctionHub</div>
+        <ul className="hidden md:flex gap-6">
+          <Link className={`navbarLine ${isActive('/')}`} to="/">
             Home
-          </a>
-          <a className="navbarLine " href="">
+          </Link>
+          <Link className={`navbarLine ${isActive('/about')}`} to="/about">
             About Us
-          </a>
-          <a className="navbarLine " href="">
+          </Link>
+          <Link className={`navbarLine ${isActive('/properties')}`} to="/properties">
             Properties
-          </a>
-          <a className="navbarLine " href="">
+          </Link>
+          <Link className={`navbarLine ${isActive('/explore')}`} to="/explore">
             Services
-          </a>
-          <a className="navbarLine " href="">
+          </Link>
+          <Link className={`navbarLine ${isActive('/contact')}`} to="/contact">
             Contact Us
-          </a>
-        </div>
-
-        <img
-          onClick={() => setIsmenuOpen((prev) => !prev)}
-          className="p-2 md:hidden cursor-pointer mx-4"
-          src={humburger}
-          alt="Menu"
-        />
-
+          </Link>
+        </ul>
+        <button className="md:hidden text-2xl" onClick={() => setIsmenuOpen((prev) => !prev)}>
+          {/* Hamburger icon */}
+          <img
+            className="p-2 md:hidden cursor-pointer mx-4"
+            src={humburger}
+            alt="Menu"
+          />
+        </button>
+        {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-gray-800   text-white shadow-md p-4 flex flex-col gap-4">
-            <a className="navbarLine " href="">
+          <ul className="flex flex-col absolute top-16 left-0 w-full bg-gray-900 md:hidden">
+            <Link className={`navbarLine ${isActive('/')}`} to="/" onClick={() => setIsmenuOpen(false)}>
               Home
-            </a>
-            <a className="navbarLine " href="">
+            </Link>
+            <Link className={`navbarLine ${isActive('/about')}`} to="/about" onClick={() => setIsmenuOpen(false)}>
               About Us
-            </a>
-            <a className="navbarLine " href="">
+            </Link>
+            <Link className={`navbarLine ${isActive('/properties')}`} to="/properties" onClick={() => setIsmenuOpen(false)}>
               Properties
-            </a>
-            <a className="navbarLine " href="">
+            </Link>
+            <Link className={`navbarLine ${isActive('/explore')}`} to="/explore" onClick={() => setIsmenuOpen(false)}>
               Services
-            </a>
-            <a className="navbarLine " href="">
+            </Link>
+            <Link className={`navbarLine ${isActive('/contact')}`} to="/contact" onClick={() => setIsmenuOpen(false)}>
               Contact Us
-            </a>
-          </div>
+            </Link>
+          </ul>
         )}
-      </div>
+      </nav>
     </>
   );
 };

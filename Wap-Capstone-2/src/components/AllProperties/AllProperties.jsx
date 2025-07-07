@@ -263,9 +263,6 @@ const AllProperties = () => {
           </div>
         </div>
       </div>
-      <div className="px-10">
-        <Footer />
-      </div>
     </div>
   );
 };

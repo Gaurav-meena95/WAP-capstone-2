@@ -7,8 +7,8 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 const About = () => {
   return (
     <div className="text-white  ">
-      <div className="disply_flex bg-gray-900 mx-2 max-[432px]:flex-col-reverse">
-        <div className="w-1/2 max-[432px]:flex-wrap max-[432px]:w-100">
+      <div className="flex flex-col md:flex-row bg-gray-900 mx-2">
+        <div className="w-full md:w-1/2">
           <div className=" mx-10 my-10 max-[432px]:mx-1 px-10 ">
             <h1 className="text-5xl my-10 max-[432px]:text-4xl ">
               Our Journey
@@ -23,9 +23,9 @@ const About = () => {
           </div>
           <Expirence />
         </div>
-        <div className="w-1/2 p-10 max-[432px]:w-100">
+        <div className="w-full md:w-1/2 p-4 md:p-10">
           <img
-            className="rounded "
+            className="rounded w-full h-auto max-w-xs md:max-w-full"
             src="https://www.rismedia.com/wp-content/uploads/2021/03/luxury_real_estate_1150278000-1.jpg"
             alt=""
           />
@@ -322,9 +322,6 @@ const About = () => {
 
       <div className="my-20 mx-10 max-[432px]:mx-10 max-[432px]:my-20 ">
         <Explore />
-      </div>
-      <div className="mx-20 max-[432px]:mx-10">
-        <Footer />
       </div>
     </div>
   );

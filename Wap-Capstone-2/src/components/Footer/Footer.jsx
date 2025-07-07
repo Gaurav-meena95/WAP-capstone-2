@@ -21,34 +21,40 @@ const Footer = () => {
             <button className="border_stl block bg-purple-900 px-10 py-2">Send</button>
           </div>
           <div className="flex  max-[432px]:flex-wrap  max-[432px]:my-10  gap-15">
-            <div className="w-30">
-              <h2>Home</h2>
+            <div className="w-30 hover:cursor-pointer">
+              <h2 className="mb-3 text-gray-700">Home</h2>
               <p>Features</p>
               <p>Properties</p>
+              <p>Testimonials</p>
+              <p>FAQs</p>
             </div>
-            <div className="w-30">
-              <h2>About Us</h2>
+            <div className="w-30 hover:cursor-pointer">
+              <h2 className="mb-3 text-gray-700">About Us</h2>
               <p>Our Story</p>
-              <p>Our Story</p>
-              <p>Our Story</p>
-              <p>Our Story</p>
+              <p>Our Team</p>
+              <p>Careers</p>
+              <p>Press</p>
             </div>
-            <div className="w-30">
-              <h2>Properties</h2>
+            <div className="w-30 hover:cursor-pointer">
+              <h2 className="mb-3 text-gray-700">Properties</h2>
               <p>Portfolio</p>
               <p>Categories</p>
+              <p>Featured Listings</p>
+              <p>Recently Sold</p>
             </div>
-            <div className="w-30">
-              <h2>Services</h2>
+            <div className="w-30 hover:cursor-pointer">
+              <h2 className="mb-3 text-gray-700">Services</h2>
               <p>Valuation Mastery</p>
               <p>Strategic Marketing</p>
               <p>Closing Success</p>
               <p>Property Management</p>
             </div>
-            <div className="w-30">
-              <h2>Contact Us </h2>
+            <div className="w-30 hover:cursor-pointer">
+              <h2 className="mb-3 text-gray-700">Contact Us</h2>
               <p>Contact Form</p>
               <p>Our Offices</p>
+              <p>Support</p>
+              <p>Live Chat</p>
             </div>
           </div>
         </div>

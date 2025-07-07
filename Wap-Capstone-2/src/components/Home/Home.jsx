@@ -7,6 +7,7 @@ import Properties from "../Properties/Properties";
 import Footer from "../Footer/Footer";
 import Explore from "../Explore/Explore";
 import Expirence from "../Expirence/Expirence";
+import HomeFeatures from "./HomeFeatures";
 const Home = () => {
   return (
     <div className=" text-white">
@@ -14,7 +15,7 @@ const Home = () => {
       <div className="disply_flex bg-gray-900 border border-gray-600  phone  ">
         <div className="text_cont">
           <div className=" mx-10 my-10">
-            <h1 className="text-5xl my-10">
+            <h1 className="text-2xl md:text-4xl">
               Discover Your Dream Property with Estatein
             </h1>
             <p className="text-gray-500">
@@ -30,32 +31,18 @@ const Home = () => {
           </div>
           <Expirence/>
         </div>
-        <div className=" w-1/2 mx-10 flex max-[432px]:w-full max-[432px]:my-10 bg-contain  ">
+        <div className=" w-full md:w-1/2 mx-10 flex max-[432px]:w-full max-[432px]:my-10 bg-contain  ">
           <img className="rounded"
             src="https://wallpapers.com/images/hd/dark-luxury-house-and-tall-glass-windows-cll7wwtf2mmy19zu.jpg" alt="home img"
           />
         </div>
       </div>
-      
-      {/* this div for next four */}
-      <div className="disply_flex  phone_grid my-10">
-        <div className="home_cont_2 grid_w border_stl ">
-          <img className="my-3" src={home} alt="" />
-          <p>Find Your Dream Home</p>
-        </div>
-        <div className="home_cont_2 grid_w border_stl ">
-          <img className="my-3" src={unlock} alt="" />
-          <p>Unlock Property Value</p>
-        </div>
-        <div className="home_cont_2 grid_w border_stl ">
-          <img className="my-3" src={effort} alt="" />
-          <p>Effortless Property Management</p>
-        </div>
-        <div className="home_cont_2 grid_w border_stl ">
-          <img className="my-3" src={smart} alt="" />{" "}
-          <p>Smart Investments, Informed Decisions</p>
-        </div>
-      </div>
+      <HomeFeatures
+        home={home}
+        unlock={unlock}
+        effort={effort}
+        smart={smart}
+      />
       <div>
         <div className="flex my-10 mt-30 mx-10">
           <div>
@@ -83,7 +70,6 @@ const Home = () => {
           </div>
         <div className="my-10 mx-10">
           <Explore/>
-          <Footer />
         </div>
       </div>
     </div>
