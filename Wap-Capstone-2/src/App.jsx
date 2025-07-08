@@ -4,10 +4,11 @@ import About from './components/About/About'
 import Home from './components/Home/Home'
 import AllProperties from './components/AllProperties/AllProperties'
 import ContactForm from './components/ContactForm/ContactForm'
-import Explore from './components/Explore/Explore'
 import Expirence from './components/Expirence/Expirence'
 import PropertyDetails from './components/PropertyDetails/PropertyDetails'
 import Footer from './components/Footer/Footer'
+import Services from './components/Services/services'
+import LiveAuctions from './components/LiveAuctions/LiveAuctions'
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/properties" element={<AllProperties />} />
+            <Route path="/auctions" element={<LiveAuctions />} />
             <Route path="/contact" element={<ContactForm />} />
-            <Route path="/explore" element={<Explore />} />
+            <Route path="/services" element={<Services/>} />
             <Route path="/experience" element={<Expirence />} />
             <Route path="/property/:id" element={<PropertyDetails />} />
           </Routes>

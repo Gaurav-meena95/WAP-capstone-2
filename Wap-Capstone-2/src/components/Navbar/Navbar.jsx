@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full px-4 py-2 flex items-center justify-between bg-gray-900">
+      <nav className="w-full px-4 py-2 flex items-center justify-between bg-gray-900 mb-5">
         <div className="text-xl font-bold">AuctionHub</div>
         <ul className="hidden md:flex gap-6">
           <Link className={`navbarLine ${isActive('/')}`} to="/">
@@ -24,7 +24,10 @@ const Navbar = () => {
           <Link className={`navbarLine ${isActive('/properties')}`} to="/properties">
             Properties
           </Link>
-          <Link className={`navbarLine ${isActive('/explore')}`} to="/explore">
+          <Link className={`navbarLine ${isActive('/auctions')}`} to="/auctions">
+            Live Auctions
+          </Link>
+          <Link className={`navbarLine ${isActive('/services')}`} to="/services">
             Services
           </Link>
           <Link className={`navbarLine ${isActive('/contact')}`} to="/contact">
@@ -51,7 +54,10 @@ const Navbar = () => {
             <Link className={`navbarLine ${isActive('/properties')}`} to="/properties" onClick={() => setIsmenuOpen(false)}>
               Properties
             </Link>
-            <Link className={`navbarLine ${isActive('/explore')}`} to="/explore" onClick={() => setIsmenuOpen(false)}>
+            <Link className={`navbarLine ${isActive('/auctions')}`} to="/auctions" onClick={() => setIsmenuOpen(false)}>
+              Live Auctions
+            </Link>
+            <Link className={`navbarLine ${isActive('/services')}`} to="/services" onClick={() => setIsmenuOpen(false)}>
               Services
             </Link>
             <Link className={`navbarLine ${isActive('/contact')}`} to="/contact" onClick={() => setIsmenuOpen(false)}>
