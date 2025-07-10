@@ -4,7 +4,34 @@ import Footer from "../Footer/Footer";
 import Expirence from "../Expirence/Expirence";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import Feature from "./Feature";
 const About = () => {
+  const featuresData = [
+    {
+      icon: "https://ik.imagekit.io/iyp2cf0jo/Icon%20Container.png?updatedAt=1752113697693",
+      alt: "Trust",
+      title: "Trust",
+      description: "Trust is the cornerstone of every successful real estate transaction."
+    },
+    {
+      icon: "https://ik.imagekit.io/iyp2cf0jo/Icon%20Container%20(1).png?updatedAt=1747466440350",
+      alt: "Excellence",
+      title: "Excellence",
+      description: "We set the bar high for ourselves. From the properties we list to the services we provide."
+    },
+    {
+      icon: "https://ik.imagekit.io/iyp2cf0jo/Icon%20Container%20(3).png?updatedAt=1747466595306",
+      alt: "Client-Centric",
+      title: "Client-Centric",
+      description: "Your dreams and needs are at the center of our universe. We listen, understand.."
+    },
+    {
+      icon: "https://ik.imagekit.io/iyp2cf0jo/Icon%20Container.png?updatedAt=1752113697693",
+      alt: "Our Commitment",
+      title: "Our Commitment",
+      description: "Trust is the cornerstone of every successful real estate transaction."
+    }
+  ];
   return (
     <div className="text-white  ">
       <div className="flex flex-col md:flex-row bg-gray-900 mx-2">
@@ -43,67 +70,8 @@ const About = () => {
           </div>
         </div>
         <div className="w-full  flex justify-center  my-10 shadow-amber-300 flex-wrap">
-          <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2   p-10">
-            <div className="flex justify-start items-center gap-3">
-              <img
-              src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container.png?updatedAt=1747466222733"
-                alt="Trust"
-              />
-              <h3>Trust</h3>
-            </div>
-            <div>
-              <p className="text-gray-600">
-                Trust is the cornerstone of every successful real estate
-                transaction.
-              </p>
-            </div>
+        <Feature features={featuresData}/>
           </div>
-          <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2  p-10">
-            <div className="flex justify-start items-center gap-3">
-              <img
-                src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container%20(1).png?updatedAt=1747466440350"
-                alt="Excellence"
-              />
-              <h3>Excellence</h3>
-            </div>
-            <div>
-              <p className="text-gray-600">
-                We set the bar high for ourselves. From the properties we list
-                to the services we provide.
-              </p>
-            </div>
-          </div>
-          <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2  p-10">
-            <div className="flex justify-start items-center gap-3">
-              <img
-                src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container%20(3).png?updatedAt=1747466595306"
-                alt="Client-Centric"
-              />
-              <h3>Client-Centric</h3>
-            </div>
-            <div>
-              <p className="text-gray-600">
-                Your dreams and needs are at the center of our universe. We
-                listen, understand..
-              </p>
-            </div>
-          </div>
-          <div className="border border-gray-800 rounded-lg w-90 mx-2 my-2  p-10">
-            <div className="flex justify-start items-center gap-3">
-              <img
-              src="https://ik.imagekit.io/iyp2cf0jo/Icon%20Container.png?updatedAt=1747466222733"
-                alt="Our Commitment"
-              />
-              <h3>Our Commitment</h3>
-            </div>
-            <div>
-              <p className="text-gray-600">
-                Trust is the cornerstone of every successful real estate
-                transaction.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       <div className="main">
         <div className=" w-full mx-10 my-10 ">
