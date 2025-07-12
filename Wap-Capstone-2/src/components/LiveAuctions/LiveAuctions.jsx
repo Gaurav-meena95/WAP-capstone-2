@@ -9,7 +9,7 @@ import {
   faFire,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Mock auction data
+// Extended mock auction data with 15+ items
 const mockAuctions = [
   {
     id: 1,
@@ -17,14 +17,10 @@ const mockAuctions = [
     address: "123 Ocean Drive, Malibu, CA",
     currentBid: 1250000,
     startingBid: 800000,
-    endTime: Date.now() + 1000 * 60 * 45, // 45 minutes from now
+    endTime: Date.now() + 1000 * 60 * 45,
     totalBids: 23,
     bidders: 8,
     image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&h=300&fit=crop",
-    bidHistory: [
-      { user: "Alice Johnson", amount: 1200000, time: Date.now() - 1000 * 60 * 5 },
-      { user: "Bob Smith", amount: 1250000, time: Date.now() - 1000 * 60 * 2 },
-    ],
     status: "live"
   },
   {
@@ -33,14 +29,10 @@ const mockAuctions = [
     address: "456 Business Ave, New York, NY",
     currentBid: 850000,
     startingBid: 600000,
-    endTime: Date.now() + 1000 * 60 * 120, // 2 hours from now
+    endTime: Date.now() + 1000 * 60 * 120,
     totalBids: 15,
     bidders: 5,
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop",
-    bidHistory: [
-      { user: "Carol Davis", amount: 800000, time: Date.now() - 1000 * 60 * 10 },
-      { user: "David Wilson", amount: 850000, time: Date.now() - 1000 * 60 * 1 },
-    ],
     status: "live"
   },
   {
@@ -49,14 +41,154 @@ const mockAuctions = [
     address: "789 Forest Road, Aspen, CO",
     currentBid: 450000,
     startingBid: 300000,
-    endTime: Date.now() + 1000 * 60 * 30, // 30 minutes from now
+    endTime: Date.now() + 1000 * 60 * 30,
     totalBids: 31,
     bidders: 12,
     image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop",
-    bidHistory: [
-      { user: "Emma Brown", amount: 420000, time: Date.now() - 1000 * 60 * 8 },
-      { user: "Frank Miller", amount: 450000, time: Date.now() - 1000 * 60 * 3 },
-    ],
+    status: "live"
+  },
+  {
+    id: 4,
+    property: "Historic Townhouse",
+    address: "321 Heritage Lane, Boston, MA",
+    currentBid: 680000,
+    startingBid: 500000,
+    endTime: Date.now() + 1000 * 60 * 90,
+    totalBids: 18,
+    bidders: 7,
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 5,
+    property: "Modern City Loft",
+    address: "567 Urban Street, Chicago, IL",
+    currentBid: 320000,
+    startingBid: 250000,
+    endTime: Date.now() + 1000 * 60 * 60,
+    totalBids: 12,
+    bidders: 4,
+    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 6,
+    property: "Desert Oasis Villa",
+    address: "890 Palm Springs Blvd, Scottsdale, AZ",
+    currentBid: 920000,
+    startingBid: 700000,
+    endTime: Date.now() + 1000 * 60 * 75,
+    totalBids: 25,
+    bidders: 9,
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 7,
+    property: "Coastal Beach House",
+    address: "234 Shore Drive, Miami Beach, FL",
+    currentBid: 780000,
+    startingBid: 550000,
+    endTime: Date.now() + 1000 * 60 * 45,
+    totalBids: 20,
+    bidders: 6,
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 8,
+    property: "Lakeside Cottage",
+    address: "456 Lake View Road, Lake Tahoe, CA",
+    currentBid: 420000,
+    startingBid: 300000,
+    endTime: Date.now() + 1000 * 60 * 60,
+    totalBids: 16,
+    bidders: 5,
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 9,
+    property: "Suburban Family Home",
+    address: "789 Oak Street, Denver, CO",
+    currentBid: 580000,
+    startingBid: 450000,
+    endTime: Date.now() + 1000 * 60 * 90,
+    totalBids: 22,
+    bidders: 8,
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 10,
+    property: "Urban Condo",
+    address: "123 City Center, Austin, TX",
+    currentBid: 380000,
+    startingBid: 280000,
+    endTime: Date.now() + 1000 * 60 * 45,
+    totalBids: 14,
+    bidders: 4,
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 11,
+    property: "Mountain View Condo",
+    address: "Boulder, CO",
+    currentBid: 290000,
+    startingBid: 200000,
+    endTime: Date.now() + 1000 * 60 * 60,
+    totalBids: 10,
+    bidders: 3,
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 12,
+    property: "Oceanfront Luxury Estate",
+    address: "Newport Beach, CA",
+    currentBid: 2500000,
+    startingBid: 1800000,
+    endTime: Date.now() + 1000 * 60 * 120,
+    totalBids: 15,
+    bidders: 6,
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 13,
+    property: "Downtown Loft Space",
+    address: "Seattle, WA",
+    currentBid: 320000,
+    startingBid: 250000,
+    endTime: Date.now() + 1000 * 60 * 60,
+    totalBids: 12,
+    bidders: 4,
+    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 14,
+    property: "Suburban Family Home",
+    address: "Denver, CO",
+    currentBid: 480000,
+    startingBid: 350000,
+    endTime: Date.now() + 1000 * 60 * 90,
+    totalBids: 20,
+    bidders: 7,
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop",
+    status: "live"
+  },
+  {
+    id: 15,
+    property: "Mountain View Condo",
+    address: "Boulder, CO",
+    currentBid: 290000,
+    startingBid: 200000,
+    endTime: Date.now() + 1000 * 60 * 60,
+    totalBids: 10,
+    bidders: 3,
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop",
     status: "live"
   }
 ];
