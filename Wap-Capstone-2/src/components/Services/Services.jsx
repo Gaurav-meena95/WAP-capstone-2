@@ -62,7 +62,7 @@ function Services() {
     return (
         <>
         <div className="px-4 sm:px-6 md:px-10 p-10 md:p-20 bg-gray-900">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl ">
                 <h1 className="mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Elevate Your Real Estate Experience</h1>
                 <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams.</p>
             </div>
@@ -74,7 +74,7 @@ function Services() {
                 smart={smart}
             />
             <div className="px-4 sm:px-6 md:px-10 rounded border border-gray-700 my-6 md:my-10 p-4 sm:p-6 md:p-10">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-4xl ">
                     <h1 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Unlock Property Value</h1>
                     <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-6 md:mb-8">Selling your property should be a rewarding experience, and at Estatein, we make sure it is. Our Property Selling Service is designed to maximize the value of your property, ensuring you get the best deal possible. Explore the categories below to see how we can help you at every step of your selling journey</p>
                 </div>
@@ -83,7 +83,7 @@ function Services() {
                 </div>
             </div>
             <div className="px-4 sm:px-6 md:px-10 rounded border border-gray-700 my-6 md:my-10 p-4 sm:p-6 md:p-10">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-4xl ">
                     <h1 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Effortless Property Management</h1>
                     <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-6 md:mb-8">Owning a property should be a pleasure, not a hassle. Estatein's Property Management Service takes the stress out of property ownership, offering comprehensive solutions tailored to your needs. Explore the categories below to see how we can make property management effortless for you</p>
                 </div>
