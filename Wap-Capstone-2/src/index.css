@@ -46,6 +46,54 @@
   .feature{
     @apply h-12 bg-gray-900 flex items-center gap-5 p-2 my-4 border-l-3 border-purple-700 rounded-lg;
   }
+
+  /* New image optimization classes */
+  .hero-image {
+    @apply w-full h-80 object-cover rounded-lg max-w-full;
+  }
+
+  .property-image {
+    @apply w-full h-48 object-cover rounded-lg;
+  }
+
+  .home-property-image {
+    @apply w-full h-48 object-cover rounded-lg;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 object-contain max-w-full;
+  }
+
+  .logo-image {
+    @apply w-8 h-8 object-contain;
+  }
+
+  .team-image {
+    @apply w-full h-64 object-cover rounded-lg;
+  }
+
+  .responsive-image {
+    @apply w-full h-auto object-cover max-w-full;
+  }
+
+  /* Mobile-specific image optimizations */
+  .mobile-image {
+    @apply max-[432px]:w-full max-[432px]:h-auto max-[432px]:object-contain;
+  }
+
+  /* Image container for better alignment */
+  .image-container {
+    @apply flex items-center justify-center overflow-hidden;
+  }
+
+  /* Aspect ratio containers */
+  .aspect-square {
+    @apply aspect-square w-full;
+  }
+
+  .aspect-video {
+    @apply aspect-video w-full;
+  }
 }
 
 :root {

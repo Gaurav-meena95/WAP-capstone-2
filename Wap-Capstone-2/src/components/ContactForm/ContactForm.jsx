@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import mail from "../../assets/mail.png"
 import call from "../../assets/call.png"
 import handel from "../../assets/handel.png"
@@ -7,6 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 const ContactForm = () => {
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className='px-10 py-20 bg-gray-950'>
@@ -17,19 +22,27 @@ const ContactForm = () => {
       {/* Contact Info Cards - Using existing phone_grid class */}
       <div className="disply_flex phone_grid my-10">
         <div className="home_cont_2 grid_w border_stl">
-          <img className="my-3" src={mail} alt="Email" />
+          <div className="image-container my-3">
+            <img className="feature-icon" src={mail} alt="Email" />
+          </div>
           <p className='text-amber-50'>info@estatein.com</p>
         </div>
         <div className="home_cont_2 grid_w border_stl">
-          <img className="my-3" src={call} alt="Phone" />
+          <div className="image-container my-3">
+            <img className="feature-icon" src={call} alt="Phone" />
+          </div>
           <p className='text-amber-50'>+1 (123) 456-7890</p>
         </div>
         <div className="home_cont_2 grid_w border_stl">
-          <img className="my-3" src={location} alt="Location" />
+          <div className="image-container my-3">
+            <img className="feature-icon" src={location} alt="Location" />
+          </div>
           <p className='text-amber-50'>Main Headquarters</p>
         </div>
         <div className="home_cont_2 grid_w border_stl">
-          <img className="my-3" src={handel} alt="Social Media" />
+          <div className="image-container my-3">
+            <img className="feature-icon" src={handel} alt="Social Media" />
+          </div>
           <div className='flex gap-4 underline max-[432px]:flex-col max-[432px]:gap-2'>
             <a href="#">Instagram</a>
             <a href="#">LinkedIn</a>

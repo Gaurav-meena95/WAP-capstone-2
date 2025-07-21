@@ -10,9 +10,14 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
 
 const PropertyDetails = () => {
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="">
       <div className="disply_flex my-10 mx-10 bg-gray-950 max-[432px]:flex-wrap">
@@ -26,26 +31,21 @@ const PropertyDetails = () => {
           <h3>$1,250,000</h3>
         </div>
       </div>
-      <div className="flex justify-between p-10 mx-10 bg-gray-900">
-        <div>
+      <div className="flex justify-between p-10 mx-10 bg-gray-900 phone">
+        <div className="image-container">
         <img
-          className="w-165"
+          className="responsive-image mobile-image"
           src="https://ik.imagekit.io/iyp2cf0jo/Image%20(8).png?updatedAt=1747477087897"
-          alt=""
+          alt="Property image"
         />
         </div>
-        <div className="hidden">
+        <div className="image-container">
         <img
-          className=" min-[432px]:hidden w-165"
+          className="responsive-image mobile-image"
           src="https://ik.imagekit.io/iyp2cf0jo/Image%20(9).png?updatedAt=1747477267959"
-          alt=""
+          alt="Property image"
         />
         </div>
-        <img
-          className=" max-[432px]:hidden w-165"
-          src="https://ik.imagekit.io/iyp2cf0jo/Image%20(9).png?updatedAt=1747477267959"
-          alt=""
-        />
       </div>
       <div className="flex justify-center items-center">
         <div className="flex items-center gap-1">

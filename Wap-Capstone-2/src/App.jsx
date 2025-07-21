@@ -22,13 +22,13 @@ function App() {
             <Route path="/properties" element={<AllProperties />} />
             <Route path="/auctions" element={<LiveAuctions />} />
             <Route path="/contact" element={<ContactForm />} />
-            <Route path="/services" element={<Services/>} />
+            <Route path="/services" element={<Services />} />
             <Route path="/experience" element={<Expirence />} />
             <Route path="/property/:id" element={<PropertyDetails />} />
           </Routes>
         </main>
         <div className='px-10'>
-        <Footer />
+          <Footer />
         </div>
       </Router>
     </div>

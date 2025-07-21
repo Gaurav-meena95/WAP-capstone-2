@@ -1,27 +1,26 @@
-import React, { useState } from 'react'
-import house from '../../assets/house.png'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Properties = ({ propertyData }) => {
+const HomeProperty = ({ propertyData }) => {
   const navigate = useNavigate();
-  // Default property data if none provided
+  
   const property = propertyData || {
     title: "Seaside Serenity Villa",
     price: "$550,000",
     bedrooms: 3,
     bathrooms: 2,
-    image: house,
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     location: "Miami Beach, FL",
     type: "Villa"
   };
 
   return (
-    <div className='border_stl my-5 p-3 w-100 max-[432px]:w-full max-[432px]:my-5'>
+    <div className='border_stl my-5 p-3 w-80 max-[432px]:w-full max-[432px]:my-5'>
       <div className="w-full h-48 overflow-hidden rounded image-container">
         <img 
           src={property.image} 
           alt={property.title}
-          className="property-image"
+          className="home-property-image"
         />
       </div>
 
@@ -51,4 +50,4 @@ const Properties = ({ propertyData }) => {
   )
 }
 
-export default Properties
+export default HomeProperty 

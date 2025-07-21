@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Explore = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="disply_flex  max-[432px]:flex-col p-10  border_stl">
     <div>
@@ -15,7 +18,10 @@ const Explore = () => {
       </p>
     </div>
     <div className=" mx-10">
-      <button className="bg-purple-600 p-2 rounded  my-5 w-50">
+      <button 
+        className="bg-purple-600 p-2 rounded my-5 w-50 cursor-pointer "
+        onClick={() => navigate("/properties")}
+      >
         Explore Properties
       </button>
     </div>

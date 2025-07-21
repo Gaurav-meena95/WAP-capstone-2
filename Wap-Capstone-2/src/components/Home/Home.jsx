@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import home from "../../assets/home2.png";
 import effort from "../../assets/effort.png";
 import smart from "../../assets/smart.png";
@@ -8,27 +8,51 @@ import Footer from "../Footer/Footer";
 import Explore from "../Explore/Explore";
 import Expirence from "../Expirence/Expirence";
 import HomeFeatures from "./HomeFeatures";
+import { useNavigate } from "react-router-dom";
+
+const heroImages = [
+  "https://wallpapers.com/images/hd/dark-luxury-house-and-tall-glass-windows-cll7wwtf2mmy19zu.jpg",
+  "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+];
 
 const Home = () => {
+  const navigate = useNavigate();
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   // Array of objects for hero section buttons
   const heroButtons = [
     {
       id: 1,
       text: "Learn More",
       className: "border_stl p-2 hover:bg-gray-800 transition-colors",
-      action: () => console.log("Learn More clicked")
+      action: () => navigate("/about")
     },
     {
       id: 2,
       text: "Browse Properties",
       className: "bg-purple-600 p-2 rounded hover:bg-purple-700 transition-colors",
-      action: () => console.log("Browse Properties clicked")
+      action: () => navigate("/properties")
     },
     {
       id: 3,
       text: "Contact Us",
       className: "border_stl p-2 hover:bg-gray-800 transition-colors",
-      action: () => console.log("Contact Us clicked")
+      action: () => navigate("/contact")
     }
   ];
 
@@ -332,7 +356,7 @@ const Home = () => {
               {sectionContent.hero.description}
             </p>
           </div>
-          <div className="flex gap-6 mx-10 my-10">
+          <div className="flex gap-6 mx-10 my-10 ">
             {heroButtons.map((button) => (
               <button 
                 key={button.id}
@@ -347,8 +371,8 @@ const Home = () => {
         </div>
         <div className="w-full md:w-1/2 mx-10 flex max-[432px]:w-full max-[432px]:my-10 bg-contain">
           <img 
-            className="rounded"
-            src={sectionContent.hero.image} 
+            className="rounded object-cover w-full h-80"
+            src={heroImages[currentHeroImage]} 
             alt="Luxury home showcase"
           />
         </div>
@@ -386,8 +410,8 @@ const Home = () => {
         </div>
 
         {/* Desktop Properties */}
-        <div className="flex justify-around items-center phone gap-1 max-[432px]:hidden">
-          {featuredProperties.slice(0, 3).map((property) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-[432px]:hidden">
+          {featuredProperties.slice(0,3).map((property) => (
             <Properties 
               key={property.id}
               propertyData={property}
@@ -401,7 +425,10 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center items-center my-10">
-          <button className="border_stl cursor-pointer p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs hover:bg-gray-800 transition-colors">
+          <button 
+            className="border_stl cursor-pointer p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs hover:bg-gray-800 transition-colors"
+            onClick={() => navigate("/properties")}
+          >
             View All Properties
           </button>
         </div>

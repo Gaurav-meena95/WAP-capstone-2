@@ -130,30 +130,30 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-950 text-white">
-      <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-16 ">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 ">
           
           {/* Company Info Section */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h1 className="text-2xl font-bold text-white mb-4">{companyInfo.name}</h1>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              <h1 className="text-2xl font-bold text-white mb-4 text-center lg:text-left">{companyInfo.name}</h1>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6 text-center lg:text-left">
                 {companyInfo.description}
               </p>
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-gray-400 text-sm">
+            <div className="space-y-3 mb-6 text-center lg:text-left">
+              <div className="flex items-center text-gray-400 text-sm justify-center lg:justify-start">
                 <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4 mr-3 text-purple-400" />
                 <span>{companyInfo.email}</span>
               </div>
-              <div className="flex items-center text-gray-400 text-sm">
+              <div className="flex items-center text-gray-400 text-sm justify-center lg:justify-start">
                 <FontAwesomeIcon icon={faPhone} className="w-4 h-4 mr-3 text-purple-400" />
                 <span>{companyInfo.phone}</span>
               </div>
-              <div className="flex items-start text-gray-400 text-sm">
+              <div className="flex items-start text-gray-400 text-sm justify-center lg:justify-start">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4 mr-3 mt-1 text-purple-400" />
                 <span>{companyInfo.address}</span>
               </div>
@@ -164,9 +164,9 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="lg:col-span-3">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center">
               {footerLinks.map((section) => (
-                <div key={section.id} className="space-y-4">
+                <div key={section.id} className="space-y-4 text-center">
                   <h3 className="text-white font-semibold text-lg border-b border-gray-700 pb-2">
                     {section.title}
                   </h3>
@@ -190,14 +190,14 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-center">
             
             {/* Copyright and Legal Links */}
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 justify-center text-center">
               <span className="text-gray-400 text-sm">
                 © 2023 {companyInfo.name}. All Rights Reserved.
               </span>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center">
                 {quickLinks.map((link) => (
                   <a 
                     key={link.id} 
@@ -211,7 +211,7 @@ const Footer = () => {
             </div>
 
             {/* Social Media Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center">
               {socialLinks.map((social) => (
                 <a 
                   key={social.id}

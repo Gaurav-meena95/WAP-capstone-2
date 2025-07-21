@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Explore from "../Explore/Explore";
 import Footer from "../Footer/Footer";
 import Expirence from "../Expirence/Expirence";
@@ -7,6 +7,11 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Feature from "./Feature";
 
 const About = () => {
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Array of objects for features
   const featuresData = [
     {
@@ -153,9 +158,9 @@ const About = () => {
           </div>
           <Expirence />
         </div>
-        <div className="w-full md:w-1/2 p-4 md:p-10">
+        <div className="w-full md:w-1/2 p-4 md:p-10 image-container">
           <img
-            className="rounded w-full h-auto max-w-xs md:max-w-full"
+            className="responsive-image mobile-image rounded"
             src="https://www.rismedia.com/wp-content/uploads/2021/03/luxury_real_estate_1150278000-1.jpg"
             alt="Estatein office"
           />
@@ -218,9 +223,9 @@ const About = () => {
         <div className="profile flex gap-4 justify-center items-center flex-wrap">
           {teamMembers.map((member) => (
             <div key={member.id} className="border_stl w-80">
-              <div className="flex justify-center items-center">
+              <div className="image-container">
                 <img
-                  className="w-90 h-80 p-5 max-[432px]:h-70"
+                  className="team-image mobile-image"
                   src={member.image}
                   alt={member.name}
                 />
@@ -246,7 +251,7 @@ const About = () => {
         </div>
       </div>
       
-      <div className="stats-section bg-gray-900 py-20">
+      <div className="stats-section bg-gray-900 py-20 my-10">
         <div className="mx-10">
           <h1 className="text-center mb-10">Our Achievements</h1>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

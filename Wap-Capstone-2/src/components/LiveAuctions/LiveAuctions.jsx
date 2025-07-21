@@ -214,6 +214,11 @@ function formatCurrency(amount) {
 }
 
 export default function LiveAuctions() {
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [auctions, setAuctions] = useState(mockAuctions);
   const [now, setNow] = useState(Date.now());
   const [selectedAuction, setSelectedAuction] = useState(null);

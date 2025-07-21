@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -12,6 +12,11 @@ import Properties from "../Properties/Properties";
 import PropertyForm from "../Properties/PropertyDetails/PropertyForm";
 
 const AllProperties = () => {
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Array of objects for filter options - UPDATED to match actual property locations
   const filterOptions = {
     locations: [
@@ -523,7 +528,7 @@ const AllProperties = () => {
       {/* Properties Grid */}
       <div className="px-10 mb-8 max-[432px]:px-5">
         {filteredProperties.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {getCurrentProperties().map((property) => (
               <Properties key={property.id} propertyData={property} />
             ))}

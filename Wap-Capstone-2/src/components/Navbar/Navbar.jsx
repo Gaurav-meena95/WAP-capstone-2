@@ -36,11 +36,13 @@ const Navbar = () => {
         </ul>
         <button className="md:hidden text-2xl" onClick={() => setIsmenuOpen((prev) => !prev)}>
           {/* Hamburger icon */}
-          <img
-            className="p-2 md:hidden cursor-pointer mx-4"
-            src={humburger}
-            alt="Menu"
-          />
+          <div className="image-container p-2 md:hidden cursor-pointer mx-4">
+            <img
+              className="logo-image"
+              src={humburger}
+              alt="Menu"
+            />
+          </div>
         </button>
         {/* Mobile menu */}
         {isMenuOpen && (

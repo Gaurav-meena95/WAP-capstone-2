@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Explore from "../Explore/Explore";
 import HomeFeatures from "../Home/HomeFeatures";
 import home from "../../assets/home2.png";
@@ -7,6 +8,11 @@ import unlock from "../../assets/unlock.png";
 import Feature from "../About/Feature";
 
 function Services() {
+    // Add useEffect to scroll to top when component mounts
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
     const ServicefeaturesData = [
         {
           icon :'https://ik.imagekit.io/iyp2cf0jo/Icon%20Container%20(1).png?updatedAt=1752117108129',
