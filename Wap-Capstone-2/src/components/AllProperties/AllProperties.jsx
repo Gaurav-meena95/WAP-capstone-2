@@ -2,14 +2,9 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
-  faMagnifyingGlass,
-  faLocationDot,
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import Footer from "../Footer/Footer";
-import PropertyDetails from "../Properties/PropertyDetails/PropertyDetails";
 import Properties from "../Properties/Properties";
-import PropertyForm from "../Properties/PropertyDetails/PropertyForm";
 
 const AllProperties = () => {
   // Add useEffect to scroll to top when component mounts
@@ -325,20 +320,16 @@ const AllProperties = () => {
 
   const propertiesPerPage = 6;
 
-  // Updated filtering logic to work with the new location values
   const filteredProperties = allProperties.filter(property => {
-    // Location filter - check if location contains the filter value (case-insensitive)
     if (filters.location) {
       const propertyLocation = property.location.toLowerCase();
       const filterLocation = filters.location.toLowerCase();
       
-      // Check if the filter location is contained within the property location
       if (!propertyLocation.includes(filterLocation)) {
         return false;
       }
     }
     
-    // Property type filter - exact match (case-insensitive)
     if (filters.propertyType && property.type.toLowerCase() !== filters.propertyType.toLowerCase()) {
       return false;
     }
@@ -419,9 +410,9 @@ const AllProperties = () => {
   };
 
   return (
-    <div className="bg-gray-950 min-h-screen">
+    <div className="min-h-screen">
       {/* Header Section */}
-      <div className="px-10 py-20 max-[432px]:px-5 max-[432px]:py-10">
+      <div className="px-10 my-10 py-10 max-[432px]:px-5 max-[432px]:py-10 mx-10 bg-gray-950">
         <h1 className="text-4xl font-bold mb-4 max-[432px]:text-2xl">All Properties</h1>
         <p className="text-gray-400 mb-8 max-[432px]:text-sm">
           Discover our comprehensive collection of properties available for purchase, rent, or investment.
@@ -435,7 +426,7 @@ const AllProperties = () => {
             <h2 className="text-xl font-semibold">Filter Properties</h2>
             <button 
               onClick={clearFilters}
-              className="text-purple-400 hover:text-purple-300 text-sm underline"
+              className="text-purple-400 hover:text-purple-300 text-sm underline cursor-pointer"
             >
               Clear All Filters
             </button>
@@ -526,13 +517,15 @@ const AllProperties = () => {
       </div>
 
       {/* Properties Grid */}
-      <div className="px-10 mb-8 max-[432px]:px-5">
+      <div className="mx-10 rounded-sm py-8 mb-8 max-[432px]:px-5 bg-gray-900">
         {filteredProperties.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          <div className="mx-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-[432px]:hidden px-10">
             {getCurrentProperties().map((property) => (
               <Properties key={property.id} propertyData={property} />
             ))}
-          </div>
+            </div>
+            </div>
         ) : (
           <div className="text-center py-12">
             <h3 className="text-xl font-semibold mb-2">No properties found</h3>

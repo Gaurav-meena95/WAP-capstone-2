@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full px-4 py-2 flex items-center justify-between bg-gray-900 mb-5">
+      <nav className="w-full px-4 py-4 flex items-center justify-between bg-gray-900 mb-5">
         <div className="text-xl font-bold">AuctionHub</div>
         
         <ul className="hidden md:flex gap-6">
@@ -39,9 +39,6 @@ const Navbar = () => {
           </Link>
           <Link className={`navbarLine ${isActive('/properties')}`} to="/properties">
             Properties
-          </Link>
-          <Link className={`navbarLine ${isActive('/auctions')}`} to="/auctions">
-            Live Auctions
           </Link>
           <Link className={`navbarLine ${isActive('/services')}`} to="/services">
             Services
@@ -116,9 +113,6 @@ const Navbar = () => {
             </Link>
             <Link className={`navbarLine ${isActive('/properties')}`} to="/properties" onClick={() => setIsmenuOpen(false)}>
               Properties
-            </Link>
-            <Link className={`navbarLine ${isActive('/auctions')}`} to="/auctions" onClick={() => setIsmenuOpen(false)}>
-              Live Auctions
             </Link>
             <Link className={`navbarLine ${isActive('/services')}`} to="/services" onClick={() => setIsmenuOpen(false)}>
               Services

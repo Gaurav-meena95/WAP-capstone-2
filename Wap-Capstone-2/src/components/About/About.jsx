@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Explore from "../Explore/Explore";
-import Footer from "../Footer/Footer";
 import Expirence from "../Expirence/Expirence";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -142,7 +141,7 @@ const About = () => {
 
   return (
     <div className="text-white">
-      <div className="flex flex-col md:flex-row bg-gray-900 mx-2">
+      <div className="flex flex-col md:flex-row bg-gray-900 mx-10">
         <div className="w-full md:w-1/2">
           <div className="mx-10 my-10 max-[432px]:mx-1 px-10">
             <h1 className="text-5xl my-10 max-[432px]:text-4xl">
@@ -167,7 +166,7 @@ const About = () => {
         </div>
       </div>
       
-      <div className="flex justify-between items-center mx-10 my-10 max-[432px]:flex-wrap">
+      <div className="flex justify-between items-center bg-gray-950 mx-10 p-10 my-10 max-[432px]:flex-wrap">
         <div className="w-160">
           <div>
             <h1>Our Values</h1>
@@ -178,12 +177,12 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-center my-10 shadow-amber-300 flex-wrap">
+        <div className="w-full flex justify-center my-10 flex-wrap">
           <Feature features={featuresData} />
         </div>
       </div>
       
-      <div className="main">
+      <div className="bg-gray-950 rounded-sm py-10 mx-10">
         <div className="w-full mx-10 my-10">
           <h1 className="my-10">Navigating the Estatein Experience</h1>
           <p className="w-250 max-[432px]:w-80 max-[432px]:text-[16px]">
@@ -192,7 +191,7 @@ const About = () => {
             step-by-step guide to how it all works.
           </p>
         </div>
-        <div className="mx-10 my-10 flex justify-center items-center flex-wrap gap-2">
+        <div className=" my-10 flex justify-center items-center flex-wrap gap-2">
           {processSteps.map((step) => (
             <div key={step.id} className="w-115 h-1/4">
               <div className="border-l-1 border-purple-900">
@@ -211,7 +210,7 @@ const About = () => {
         </div>
       </div>
       
-      <div className="team">
+      <div className="bg-gray-950 py-10 my-5 rounded-sm mx-10">
         <div className="w-full mx-10 my-10">
           <h1 className="my-10">Meet the Estatein Team</h1>
           <p className="w-250 max-[432px]:w-80 max-[432px]:text-[16px]">
@@ -251,7 +250,7 @@ const About = () => {
         </div>
       </div>
       
-      <div className="stats-section bg-gray-900 py-20 my-10">
+      <div className="stats-section bg-gray-950 py-20 my-10 mx-10 rounded-sm">
         <div className="mx-10">
           <h1 className="text-center mb-10">Our Achievements</h1>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

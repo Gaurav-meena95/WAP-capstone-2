@@ -10,8 +10,7 @@ import ContactForm from './components/ContactForm/ContactForm'
 import Expirence from './components/Expirence/Expirence'
 import PropertyDetails from './components/PropertyDetails/PropertyDetails'
 import Footer from './components/Footer/Footer'
-import Services from './components/Services/services'
-import LiveAuctions from './components/LiveAuctions/LiveAuctions'
+import Services from './components/Services/Services'
 import Login from './components/Auth/Login'
 import Signup from './components/Auth/Signup'
 import ForgotPassword from './components/Auth/ForgotPassword'
@@ -53,11 +52,6 @@ function App() {
                   <AllProperties />
                 </ProtectedRoute>
               } />
-              <Route path="/auctions" element={
-                <ProtectedRoute>
-                  <LiveAuctions />
-                </ProtectedRoute>
-              } />
               <Route path="/contact" element={
                 <ProtectedRoute>
                   <ContactForm />
@@ -80,7 +74,7 @@ function App() {
               } />
             </Routes>
           </main>
-          <div className='px-10'>
+          <div className='px-10 my-10'>
             <Footer />
           </div>
         </Router>

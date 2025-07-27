@@ -4,7 +4,6 @@ import effort from "../../assets/effort.png";
 import smart from "../../assets/smart.png";
 import unlock from "../../assets/unlock.png";
 import Properties from "../Properties/Properties";
-import Footer from "../Footer/Footer";
 import Explore from "../Explore/Explore";
 import Expirence from "../Expirence/Expirence";
 import HomeFeatures from "./HomeFeatures";
@@ -346,7 +345,7 @@ const Home = () => {
   return (
     <div className="text-white">
       {/* Hero Section */}
-      <div className="disply_flex bg-gray-900 border border-gray-600 phone">
+      <div className="disply_flex mx-10 bg-gray-900 border border-gray-600 phone rounded-sm">
         <div className="text_cont">
           <div className="mx-10 my-10">
             <h1 className="text-2xl md:text-4xl">
@@ -358,7 +357,7 @@ const Home = () => {
           </div>
           <div className="flex gap-6 mx-10 my-10 ">
             {heroButtons.map((button) => (
-              <button 
+              <button
                 key={button.id}
                 className={button.className}
                 onClick={button.action}
@@ -367,12 +366,12 @@ const Home = () => {
               </button>
             ))}
           </div>
-          <Expirence/>
+          <Expirence />
         </div>
         <div className="w-full md:w-1/2 mx-10 flex max-[432px]:w-full max-[432px]:my-10 bg-contain">
-          <img 
+          <img
             className="rounded object-cover w-full h-80"
-            src={heroImages[currentHeroImage]} 
+            src={heroImages[currentHeroImage]}
             alt="Luxury home showcase"
           />
         </div>
@@ -382,7 +381,7 @@ const Home = () => {
       <HomeFeatures features={homeFeaturesData} />
 
       {/* Statistics Section */}
-      <div className="bg-gray-900 py-16">
+      <div className="bg-gray-900 mx-10 py-16 rounded-sm">
         <div className="max-w-6xl mx-auto px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {statistics.map((stat) => (
@@ -399,8 +398,8 @@ const Home = () => {
       </div>
 
       {/* Featured Properties Section */}
-      <div>
-        <div className="flex my-10 mt-30 mx-10">
+      <div className="bg-gray-900 py-5 my-10 rounded-sm mx-10">
+        <div className="flex my-10 mt-10 mx-10">
           <div>
             <h1>{sectionContent.featured.title}</h1>
             <p className="text-gray-500 my-5">
@@ -410,13 +409,15 @@ const Home = () => {
         </div>
 
         {/* Desktop Properties */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-[432px]:hidden">
-          {featuredProperties.slice(0,3).map((property) => (
-            <Properties 
-              key={property.id}
-              propertyData={property}
-            />
-          ))}
+        <div className="mx-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-[432px]:hidden px-10">
+            {featuredProperties.slice(0, 3).map((property) => (
+              <Properties
+                key={property.id}
+                propertyData={property}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Mobile Properties */}
@@ -425,7 +426,7 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center items-center my-10">
-          <button 
+          <button
             className="border_stl cursor-pointer p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs hover:bg-gray-800 transition-colors"
             onClick={() => navigate("/properties")}
           >
@@ -434,9 +435,9 @@ const Home = () => {
         </div>
 
         <div className="my-10 mx-10">
-          <Explore/>
         </div>
       </div>
+      <Explore />
     </div>
   );
 };
