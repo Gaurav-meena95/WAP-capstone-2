@@ -345,9 +345,9 @@ const Home = () => {
   return (
     <div className="text-white">
       {/* Hero Section */}
-      <div className="disply_flex mx-10 bg-gray-900 border border-gray-600 phone rounded-sm">
-        <div className="text_cont">
-          <div className="mx-10 my-10">
+      <div className="disply_flex flex-col md:flex-row mx-2 md:mx-10 bg-gray-900 border border-gray-600 phone rounded-sm p-2 md:p-6">
+        <div className="text_cont w-full md:w-1/2">
+          <div className="mx-2 md:mx-10 my-6 md:my-10">
             <h1 className="text-2xl md:text-4xl">
               {sectionContent.hero.title}
             </h1>
@@ -355,7 +355,7 @@ const Home = () => {
               {sectionContent.hero.description}
             </p>
           </div>
-          <div className="flex gap-6 mx-10 my-10 ">
+          <div className="flex flex-wrap gap-4 md:gap-6 mx-2 md:mx-10 my-6 md:my-10 ">
             {heroButtons.map((button) => (
               <button
                 key={button.id}
@@ -368,9 +368,9 @@ const Home = () => {
           </div>
           <Expirence />
         </div>
-        <div className="w-full md:w-1/2 mx-10 flex max-[432px]:w-full max-[432px]:my-10 bg-contain">
+        <div className="w-full md:w-1/2 flex justify-center items-center mt-4 md:mt-0">
           <img
-            className="rounded object-cover w-full h-80"
+            className="rounded object-cover w-full max-w-md md:max-w-full h-48 md:h-80"
             src={heroImages[currentHeroImage]}
             alt="Luxury home showcase"
           />
@@ -378,12 +378,14 @@ const Home = () => {
       </div>
 
       {/* Home Features Section */}
-      <HomeFeatures features={homeFeaturesData} />
+      <div className="w-full px-2 md:px-10">
+        <HomeFeatures features={homeFeaturesData} />
+      </div>
 
       {/* Statistics Section */}
-      <div className="bg-gray-900 mx-10 py-16 rounded-sm">
-        <div className="max-w-6xl mx-auto px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="bg-gray-900 w-full px-2 md:px-10 py-8 md:py-16 rounded-sm">
+        <div className="max-w-6xl mx-auto px-2 md:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {statistics.map((stat) => (
               <div key={stat.id} className="text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-purple-500 mb-2">
@@ -398,19 +400,19 @@ const Home = () => {
       </div>
 
       {/* Featured Properties Section */}
-      <div className="bg-gray-900 py-5 my-10 rounded-sm mx-10">
-        <div className="flex my-10 mt-10 mx-10">
+      <div className="bg-gray-900 py-5 my-8 md:my-10 rounded-sm w-full px-2 md:px-10">
+        <div className="flex flex-col md:flex-row my-6 md:my-10 mx-2 md:mx-10">
           <div>
             <h1>{sectionContent.featured.title}</h1>
-            <p className="text-gray-500 my-5">
+            <p className="text-gray-500 my-3 md:my-5">
               {sectionContent.featured.description}
             </p>
           </div>
         </div>
 
         {/* Desktop Properties */}
-        <div className="mx-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-[432px]:hidden px-10">
+        <div className="mx-2 md:mx-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-[432px]:hidden px-0 md:px-10">
             {featuredProperties.slice(0, 3).map((property) => (
               <Properties
                 key={property.id}
@@ -425,19 +427,18 @@ const Home = () => {
           <Properties propertyData={featuredProperties[0]} />
         </div>
 
-        <div className="flex justify-center items-center my-10">
+        <div className="flex justify-center items-center my-6 md:my-10">
           <button
-            className="border_stl cursor-pointer p-3 w-50 max-[432px]:w-40 max-[432px]:text-xs hover:bg-gray-800 transition-colors"
+            className="border_stl cursor-pointer p-2 md:p-3 w-32 md:w-50 max-[432px]:w-24 max-[432px]:text-xs hover:bg-gray-800 transition-colors"
             onClick={() => navigate("/properties")}
           >
             View All Properties
           </button>
         </div>
-
-        <div className="my-10 mx-10">
-        </div>
       </div>
-      <Explore />
+      <div className="w-full px-2 md:px-10">
+        <Explore />
+      </div>
     </div>
   );
 };

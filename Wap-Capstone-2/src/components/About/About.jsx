@@ -143,10 +143,10 @@ const About = () => {
 
   return (
     <div className="text-white">
-      <div className="flex flex-col md:flex-row bg-gray-900 mx-10">
+      <div className="flex flex-col md:flex-row bg-gray-900 mx-2 md:mx-10">
         <div className="w-full md:w-1/2">
-          <div className="mx-10 my-10 max-[432px]:mx-1 px-10">
-            <h1 className="text-5xl my-10 max-[432px]:text-4xl">
+          <div className="mx-2 md:mx-10 my-6 md:my-10 px-2 md:px-10">
+            <h1 className="text-3xl md:text-5xl my-6 md:my-10 max-[432px]:text-2xl md:max-[432px]:text-4xl">
               Our Journey
             </h1>
             <p className="text-gray-500">
@@ -159,7 +159,7 @@ const About = () => {
           </div>
           <Expirence />
         </div>
-        <div className="w-full md:w-1/2 p-4 md:p-10 image-container">
+        <div className="w-full md:w-1/2 p-2 md:p-10 image-container">
           <img
             className="responsive-image mobile-image rounded"
             src="https://www.rismedia.com/wp-content/uploads/2021/03/luxury_real_estate_1150278000-1.jpg"
@@ -168,42 +168,42 @@ const About = () => {
         </div>
       </div>
       
-      <div className="flex justify-between items-center bg-gray-950 mx-10 p-10 my-10 max-[432px]:flex-wrap">
-        <div className="w-160">
+      <div className="flex flex-col md:flex-row justify-between items-center bg-gray-950 mx-2 md:mx-10 p-4 md:p-10 my-6 md:my-10 max-[432px]:flex-wrap">
+        <div className="w-full md:w-1/2">
           <div>
-            <h1>Our Values</h1>
-            <p className="text-gray-600 my-10">
+            <h1 className="text-xl md:text-2xl">Our Values</h1>
+            <p className="text-gray-600 my-4 md:my-10">
               Our story is one of continuous growth and evolution. We started as
               a small team with big dreams, determined to create a real estate
               platform that transcended the ordinary.
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-center my-10 flex-wrap">
+        <div className="w-full flex justify-center my-4 md:my-10 flex-wrap">
           <Feature features={featuresData} />
         </div>
       </div>
       
-      <div className="bg-gray-950 rounded-sm py-10 mx-10">
-        <div className="w-full mx-10 my-10">
-          <h1 className="my-10">Navigating the Estatein Experience</h1>
-          <p className="w-250 max-[432px]:w-80 max-[432px]:text-[16px]">
+      <div className="bg-gray-950 rounded-sm py-6 md:py-10 md:mx-10  px-10">
+        <div className="w-full mx-2 md:mx-10 my-4 md:my-10">
+          <h1 className="my-4 md:my-10 text-xl md:text-2xl">Navigating the Estatein Experience</h1>
+          <p className="w-full md:w-2/3 max-[432px]:w-full max-[432px]:text-[16px]">
             At Estatein, we've designed a straightforward process to help you
             find and purchase your dream property with ease. Here's a
             step-by-step guide to how it all works.
           </p>
         </div>
-        <div className=" my-10 flex justify-center items-center flex-wrap gap-2">
+        <div className="my-4 md:my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-stretch">
           {processSteps.map((step) => (
-            <div key={step.id} className="w-115 h-1/4">
-              <div className="border-l-1 border-purple-900">
-                <h1 className="text-3xl mx-2 mt-10">{step.step}</h1>
+            <div key={step.id} className="w-full h-auto">
+              <div className="border-l-2 border-purple-900">
+                <h1 className="text-2xl md:text-3xl mx-2 mt-4 md:mt-10">{step.step}</h1>
               </div>
               <div className="steps">
-                <h1 className="text-3xl max-[432px]:text-2xl">
+                <h1 className="text-xl md:text-3xl max-[432px]:text-2xl">
                   {step.title}
                 </h1>
-                <p className="text-gray-500 my-10 max-[432px]:text-[16px]">
+                <p className="text-gray-500 my-4 md:my-10 max-[432px]:text-[16px]">
                   {step.description}
                 </p>
               </div>
@@ -212,18 +212,18 @@ const About = () => {
         </div>
       </div>
       
-      <div className="bg-gray-950 py-10 my-5 rounded-sm mx-10">
-        <div className="w-full mx-10 my-10">
-          <h1 className="my-10">Meet the Estatein Team</h1>
-          <p className="w-250 max-[432px]:w-80 max-[432px]:text-[16px]">
+      <div className="bg-gray-950 py-6 md:py-10 my-4 md:my-5 rounded-sm mx-2 md:mx-10">
+        <div className="w-full mx-2 md:mx-10 my-4 md:my-10">
+          <h1 className="my-4 md:my-10 text-xl md:text-2xl">Meet the Estatein Team</h1>
+          <p className="w-full md:w-2/3 max-[432px]:w-full max-[432px]:text-[16px]">
             At Estatein, our success is driven by the dedication and expertise
             of our team. Get to know the people behind our mission to make your
             real estate dreams a reality.
           </p>
         </div>
-        <div className="profile flex gap-4 justify-center items-center flex-wrap">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-center items-stretch mx-10">
           {teamMembers.map((member) => (
-            <div key={member.id} className="border_stl w-80">
+            <div key={member.id} className="border_stl w-80 mb-4">
               <div className="image-container">
                 <img
                   className="team-image mobile-image"
@@ -231,16 +231,16 @@ const About = () => {
                   alt={member.name}
                 />
               </div>
-              <div className="mx-10 mt-10">
+              <div className="mx-2 md:mx-10 mt-4 md:mt-10">
                 <div className="text-center">
-                  <h2 className="text-white">{member.name}</h2>
+                  <h2 className="text-white text-lg md:text-xl">{member.name}</h2>
                   <p className="">{member.position}</p>
                 </div>
               </div>
               <div className="flex items-center mx-5">
                 <input
                   type="text"
-                  className="border border-gray-600 rounded-3xl my-5 py-2 px-10 w-full block"
+                  className="border border-gray-600 rounded-3xl my-2 md:my-5 py-2 px-4 md:px-10 w-full block"
                   placeholder="Say Hello"
                 />
                 <div className="mx-[-40px] cursor-pointer rounded-r-xl">
@@ -252,14 +252,14 @@ const About = () => {
         </div>
       </div>
       
-      <div className="stats-section bg-gray-950 py-20 my-10 mx-10 rounded-sm">
-        <div className="mx-10">
-          <h1 className="text-center mb-10">Our Achievements</h1>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="stats-section bg-gray-950 py-10 md:py-20 my-4 md:my-10 mx-2 md:mx-10 rounded-sm">
+        <div className="mx-2 md:mx-10">
+          <h1 className="text-center mb-4 md:mb-10 text-xl md:text-2xl">Our Achievements</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {companyStats.map((stat) => (
               <div key={stat.id} className="text-center">
-                <h2 className="text-4xl font-bold text-purple-600 mb-2">{stat.number}</h2>
-                <p className="text-xl font-semibold mb-1">{stat.label}</p>
+                <h2 className="text-2xl md:text-4xl font-bold text-purple-600 mb-2">{stat.number}</h2>
+                <p className="text-lg md:text-xl font-semibold mb-1">{stat.label}</p>
                 <p className="text-gray-400 text-sm">{stat.description}</p>
               </div>
             ))}
@@ -267,7 +267,9 @@ const About = () => {
         </div>
       </div>
       
-      <Explore />
+      <div className="w-full px-2 md:px-10">
+        <Explore />
+      </div>
     </div>
   );
 };

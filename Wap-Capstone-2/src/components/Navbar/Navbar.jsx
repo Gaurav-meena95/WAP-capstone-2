@@ -104,7 +104,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <ul className="flex flex-col absolute top-16 left-0 w-full bg-gray-900 md:hidden z-50">
+          <ul className="flex flex-col absolute top-16 left-0 w-full bg-gray-900 md:hidden z-50 px-5">
             <Link className={`navbarLine ${isActive('/')}`} to="/" onClick={() => setIsmenuOpen(false)}>
               Home
             </Link>

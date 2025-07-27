@@ -324,20 +324,20 @@ const AllProperties = () => {
     if (filters.location) {
       const propertyLocation = property.location.toLowerCase();
       const filterLocation = filters.location.toLowerCase();
-      
+
       if (!propertyLocation.includes(filterLocation)) {
         return false;
       }
     }
-    
+
     if (filters.propertyType && property.type.toLowerCase() !== filters.propertyType.toLowerCase()) {
       return false;
     }
-    
+
     // Price range filter
     if (filters.priceRange) {
       const propertyPrice = parseInt(property.price.replace(/[^0-9]/g, ''));
-      
+
       if (filters.priceRange === "1000000+") {
         if (propertyPrice < 1000000) return false;
       } else {
@@ -345,11 +345,11 @@ const AllProperties = () => {
         if (propertyPrice < min || propertyPrice > max) return false;
       }
     }
-    
+
     // Property size filter
     if (filters.propertySize) {
       const propertySize = parseInt(property.size.replace(/[^0-9]/g, ''));
-      
+
       if (filters.propertySize === "4000+") {
         if (propertySize < 4000) return false;
       } else {
@@ -357,11 +357,11 @@ const AllProperties = () => {
         if (propertySize < min || propertySize > max) return false;
       }
     }
-    
+
     // Build year filter
     if (filters.buildYear) {
       const propertyYear = property.yearBuilt;
-      
+
       if (filters.buildYear === "2020+") {
         if (propertyYear < 2020) return false;
       } else if (filters.buildYear === "2010-2019") {
@@ -376,7 +376,7 @@ const AllProperties = () => {
         if (propertyYear >= 1980) return false;
       }
     }
-    
+
     return true;
   });
 
@@ -410,33 +410,33 @@ const AllProperties = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       {/* Header Section */}
-      <div className="px-10 my-10 py-10 max-[432px]:px-5 max-[432px]:py-10 mx-10 bg-gray-900">
-        <h1 className="text-4xl font-bold mb-4 max-[432px]:text-2xl">All Properties</h1>
-        <p className="text-gray-400 mb-8 max-[432px]:text-sm">
+      <div className="px-2 md:px-10 my-6 md:my-10 py-6 md:py-10 mx-2 md:mx-10 bg-gray-900">
+        <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 max-[432px]:text-2xl">All Properties</h1>
+        <p className="text-gray-400 mb-4 md:mb-8 max-[432px]:text-sm">
           Discover our comprehensive collection of properties available for purchase, rent, or investment.
         </p>
       </div>
 
       {/* Filter Section */}
-      <div className="px-10 mb-8 max-[432px]:px-5">
-        <div className="bg-gray-900 p-6 rounded-lg">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-semibold">Filter Properties</h2>
-            <button 
+      <div className="px-2 md:px-10 mb-4 md:mb-8">
+        <div className="bg-gray-900 p-4 md:p-6 rounded-lg">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-2 md:gap-0">
+            <h2 className="text-lg md:text-xl font-semibold">Filter Properties</h2>
+            <button
               onClick={clearFilters}
               className="text-purple-400 hover:text-purple-300 text-sm underline cursor-pointer"
             >
               Clear All Filters
             </button>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Location Filter */}
             <div>
               <label className="block text-sm font-medium mb-2">Location</label>
-              <select 
+              <select
                 className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500 focus:outline-none"
                 value={filters.location}
                 onChange={(e) => handleFilterChange('location', e.target.value)}
@@ -451,7 +451,7 @@ const AllProperties = () => {
             {/* Property Type Filter */}
             <div>
               <label className="block text-sm font-medium mb-2">Property Type</label>
-              <select 
+              <select
                 className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500 focus:outline-none"
                 value={filters.propertyType}
                 onChange={(e) => handleFilterChange('propertyType', e.target.value)}
@@ -466,7 +466,7 @@ const AllProperties = () => {
             {/* Price Range Filter */}
             <div>
               <label className="block text-sm font-medium mb-2">Price Range</label>
-              <select 
+              <select
                 className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500 focus:outline-none"
                 value={filters.priceRange}
                 onChange={(e) => handleFilterChange('priceRange', e.target.value)}
@@ -481,7 +481,7 @@ const AllProperties = () => {
             {/* Property Size Filter */}
             <div>
               <label className="block text-sm font-medium mb-2">Property Size</label>
-              <select 
+              <select
                 className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500 focus:outline-none"
                 value={filters.propertySize}
                 onChange={(e) => handleFilterChange('propertySize', e.target.value)}
@@ -496,7 +496,7 @@ const AllProperties = () => {
             {/* Build Year Filter */}
             <div>
               <label className="block text-sm font-medium mb-2">Build Year</label>
-              <select 
+              <select
                 className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500 focus:outline-none"
                 value={filters.buildYear}
                 onChange={(e) => handleFilterChange('buildYear', e.target.value)}
@@ -517,22 +517,22 @@ const AllProperties = () => {
       </div>
 
       {/* Properties Grid */}
-      <div className="mx-10 rounded-sm py-8 mb-8 max-[432px]:px-5 bg-gray-900">
+      <div className="mx-2 md:mx-10 rounded-sm py-6 md:py-8 mb-4 md:mb-8 bg-gray-900">
         {filteredProperties.length > 0 ? (
-          <div className="mx-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-[432px]:hidden px-10">
-            {getCurrentProperties().map((property) => (
-              <Properties key={property.id} propertyData={property} />
-            ))}
+          <div className="mx-2 md:mx-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-0 md:px-10">
+              {getCurrentProperties().map((property) => (
+                <Properties key={property.id} propertyData={property} />
+              ))}
             </div>
-            </div>
+          </div>
         ) : (
-          <div className="text-center py-12">
-            <h3 className="text-xl font-semibold mb-2">No properties found</h3>
+          <div className="text-center py-8 md:py-12">
+            <h3 className="text-lg md:text-xl font-semibold mb-2">No properties found</h3>
             <p className="text-gray-400 mb-4">Try adjusting your filters or clear all filters to see all properties.</p>
-            <button 
+            <button
               onClick={clearFilters}
-              className="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 transition-colors"
+              className="bg-purple-600 text-white px-4 md:px-6 py-2 rounded hover:bg-purple-700 transition-colors"
             >
               Clear Filters
             </button>
@@ -542,34 +542,33 @@ const AllProperties = () => {
 
       {/* Pagination */}
       {filteredProperties.length > 0 && (
-        <div className="px-10 mb-8 max-[432px]:px-5">
-          <div className="flex justify-center items-center space-x-2">
+        <div className="px-2 md:px-10 mb-4 md:mb-8">
+          <div className="flex flex-wrap justify-center items-center space-x-2">
             <button
               onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className="px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50 hover:bg-gray-700 transition-colors"
+              className="px-3 md:px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50 hover:bg-gray-700 transition-colors"
             >
               <FontAwesomeIcon icon={faArrowLeft} />
             </button>
-            
+
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
               <button
                 key={page}
                 onClick={() => setCurrentPage(page)}
-                className={`px-4 py-2 rounded transition-colors ${
-                  currentPage === page 
-                    ? 'bg-purple-600 text-white' 
+                className={`px-3 md:px-4 py-2 rounded transition-colors ${currentPage === page
+                    ? 'bg-purple-600 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                }`}
+                  }`}
               >
                 {page}
               </button>
             ))}
-            
+
             <button
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50 hover:bg-gray-700 transition-colors"
+              className="px-3 md:px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50 hover:bg-gray-700 transition-colors"
             >
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
@@ -578,13 +577,13 @@ const AllProperties = () => {
       )}
 
       {/* FAQ Section */}
-      <div className="px-10 mb-8 max-[432px]:px-5">
-        <div className="bg-gray-900 p-6 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+      <div className="px-2 md:px-10 mb-4 md:mb-8">
+        <div className="bg-gray-900 p-4 md:p-6 rounded-lg">
+          <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqData.map(faq => (
               <div key={faq.id} className="border-b border-gray-700 pb-4">
-                <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
+                <h3 className="text-base md:text-lg font-semibold mb-2">{faq.question}</h3>
                 <p className="text-gray-400">{faq.answer}</p>
               </div>
             ))}
@@ -593,14 +592,14 @@ const AllProperties = () => {
       </div>
 
       {/* clients_Data Section */}
-      <div className="px-10 mb-8 max-[432px]:px-5">
-        <h2 className="text-2xl font-bold mb-6">What Our Clients Say</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="px-2 md:px-10 mb-4 md:mb-8">
+        <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">What Our Clients Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {clients_Data.map(testimonial => (
-            <div key={testimonial.id} className="bg-gray-900 p-6 rounded-lg">
+            <div key={testimonial.id} className="bg-gray-900 p-4 md:p-6 rounded-lg">
               <div className="flex items-center mb-4">
-                <img 
-                  src={testimonial.image} 
+                <img
+                  src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full mr-4"
                 />
