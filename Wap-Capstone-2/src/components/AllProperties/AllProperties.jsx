@@ -287,13 +287,13 @@ const AllProperties = () => {
     }
   ];
 
-  // Array of objects for testimonials
-  const testimonials = [
+  // Array of objects for clients_Data
+  const clients_Data = [
     {
       id: 1,
       name: "Sarah Johnson",
       role: "Home Buyer",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://ik.imagekit.io/iyp2cf0jo/Image%20(6).png?updatedAt=1747469146296",
       text: "Estatein made buying my first home incredibly smooth. Their team was professional and guided me through every step."
     },
     {
@@ -599,11 +599,11 @@ const AllProperties = () => {
         </div>
       </div>
 
-      {/* Testimonials Section */}
+      {/* clients_Data Section */}
       <div className="px-10 mb-8 max-[432px]:px-5">
         <h2 className="text-2xl font-bold mb-6">What Our Clients Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map(testimonial => (
+          {clients_Data.map(testimonial => (
             <div key={testimonial.id} className="bg-gray-900 p-6 rounded-lg">
               <div className="flex items-center mb-4">
                 <img 
