@@ -101,7 +101,7 @@ function Services() {
 
     return (
         <>
-        <div className="mx-10  sm:px-6 md:px-10 p-10 md:p-20 bg-gray-900">
+        <div className="mx-10  sm:px-6 md:px-10 p-10 md:p-10 bg-gray-900 rounded-md">
             <div className="max-w-4xl">
                 <h1 className="mb-4 max-[432px]:text-2xl">Elevate Your Real Estate Experience</h1>
                 <p className="text-gray-500">Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams.</p>

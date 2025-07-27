@@ -4,8 +4,10 @@ import Expirence from "../Expirence/Expirence";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Feature from "./Feature";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   // Add useEffect to scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -242,7 +244,7 @@ const About = () => {
                   placeholder="Say Hello"
                 />
                 <div className="mx-[-40px] cursor-pointer rounded-r-xl">
-                  <FontAwesomeIcon className="text-2xl text-purple-600" icon={faPaperPlane} />
+                  <FontAwesomeIcon className="text-2xl text-purple-600" icon={faPaperPlane} onClick={() => navigate('/contact')} /> 
                 </div>
               </div>
             </div>

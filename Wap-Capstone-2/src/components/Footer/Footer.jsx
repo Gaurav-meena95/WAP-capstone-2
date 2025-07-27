@@ -9,8 +9,10 @@ import {
   faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   // Array of objects for footer navigation links
   const footerLinks = [
     {
@@ -128,6 +130,15 @@ const Footer = () => {
     { id: 4, name: "Sitemap", url: "#sitemap" }
   ];
 
+  // Map section titles to routes
+  const sectionRoutes = {
+    "Home": "/",
+    "About Us": "/about",
+    "Properties": "/properties",
+    "Services": "/services",
+    "Contact Us": "/contact"
+  };
+
   return (
     <footer className="bg-gray-950 text-white ">
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-2 py-10">
@@ -167,9 +178,18 @@ const Footer = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center">
               {footerLinks.map((section) => (
                 <div key={section.id} className="space-y-4 text-center">
-                  <h3 className="text-white font-semibold text-lg border-b border-gray-700 pb-2">
-                    {section.title}
-                  </h3>
+                  {sectionRoutes[section.title] ? (
+                    <h3
+                      className="text-white font-semibold text-lg border-b border-gray-700 pb-2 cursor-pointer hover:text-purple-400"
+                      onClick={() => navigate(sectionRoutes[section.title])}
+                    >
+                      {section.title}
+                    </h3>
+                  ) : (
+                    <h3 className="text-white font-semibold text-lg border-b border-gray-700 pb-2">
+                      {section.title}
+                    </h3>
+                  )}
                   <ul className="space-y-2">
                     {section.links.map((link) => (
                       <li key={link.id}>
