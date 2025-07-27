@@ -101,8 +101,8 @@ function Services() {
 
     return (
         <>
-        <div className="px-4 sm:px-6 md:px-10 p-10 md:p-20 bg-gray-900">
-            <div className="max-w-4xl mx-auto">
+        <div className="mx-10  sm:px-6 md:px-10 p-10 md:p-20 bg-gray-900">
+            <div className="max-w-4xl">
                 <h1 className="mb-4 max-[432px]:text-2xl">Elevate Your Real Estate Experience</h1>
                 <p className="text-gray-500">Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams.</p>
             </div>
@@ -110,22 +110,22 @@ function Services() {
         
         <HomeFeatures features={homeFeaturesData} />
         
-        <div className="px-4 sm:px-6 md:px-10 rounded border border-gray-700 my-6 md:my-10 p-4 sm:p-6 md:p-10">
-            <div className="max-w-4xl mx-auto">
+        <div className="px-4 sm:px-6 md:px-10 rounded-sm  md:my-10 p-4 sm:p-6 md:p-10 bg-gray-950 mx-10">
+            <div className="max-w-4xl">
                 <h1 className="mb-4 max-[432px]:text-2xl">Unlock Property Value</h1>
                 <p className="text-gray-500 mb-6 md:mb-8">Selling your property should be a rewarding experience, and at Estatein, we make sure it is. Our Property Selling Service is designed to maximize the value of your property, ensuring you get the best deal possible. Explore the categories below to see how we can help you at every step of your selling journey</p>
             </div>
-            <div className="flex flex-col md:flex-row my-6 md:my-10 bg-gray-950 rounded-lg overflow-hidden">
+            <div className="flex flex-col md:flex-row  md:my-10 bg-gray-950 rounded-lg overflow-hidden">
                 <Feature features={ServicefeaturesData}/>
             </div>
         </div>
         
-        <div className="px-4 sm:px-6 md:px-10 rounded border border-gray-700 my-6 md:my-10 p-4 sm:p-6 md:p-10">
-            <div className="max-w-4xl mx-auto">
+        <div className="px-4 sm:px-6 md:px-10 rounded-sm bg-gray-950  md:my-10 p-4 sm:p-6 md:p-10 mx-10">
+            <div className="max-w-4xl">
                 <h1 className="mb-4 max-[432px]:text-2xl">Effortless Property Management</h1>
                 <p className="text-gray-500 mb-6 md:mb-8">Owning a property should be a pleasure, not a hassle. Estatein's Property Management Service takes the stress out of property ownership, offering comprehensive solutions tailored to your needs. Explore the categories below to see how we can make property management effortless for you</p>
             </div>
-            <div className="flex flex-col md:flex-row my-6 md:my-10 bg-gray-950 rounded-lg overflow-hidden">
+            <div className="flex flex-col md:flex-row  md:my-10 bg-gray-950 rounded-lg overflow-hidden">
                 <Feature features={PropertMangment}/>
             </div>
         </div>

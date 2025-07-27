@@ -14,13 +14,13 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className='px-10 py-20 bg-gray-950'>
+      <div className='px-10 py-10 bg-gray-900 mx-10'>
         <h1>Get in Touch with Estatein</h1>
         <p className='my-10'>Welcome to Estatein's Contact Us page. We're here to assist you with any inquiries, requests, or feedback you may have. Whether you're looking to buy or sell a property, explore investment opportunities, or simply want to connect, we're just a message away. Reach out to us, and let's start a conversation.</p>
       </div>
       
       {/* Contact Info Cards - Using existing phone_grid class */}
-      <div className="disply_flex phone_grid my-10">
+      <div className="disply_flex phone_grid my-10 mx-8">
         <div className="home_cont_2 grid_w border_stl">
           <div className="image-container my-3">
             <img className="feature-icon" src={mail} alt="Email" />
@@ -52,12 +52,12 @@ const ContactForm = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="px-10 py-10">
-        <div className='py-20'>
+      <div className="">
+        <div className='bg-gray-950 mx-10 py-10 px-10 my-10'>
           <h1>Let's Connect</h1>
           <p className='mt-5'>We're excited to connect with you and learn more about your real estate goals. Use the form below to get in touch with Estatein. Whether you're a prospective client, partner, or simply curious about our services, we're here to answer your questions and provide the assistance you need.</p>
         </div>
-        <form className='space-y-6 p-10 border border-gray-800 rounded-lg'>
+        <form className='space-y-6 p-10 border border-gray-800 bg-gray-950 rounded-lg mx-10'>
           {/* Personal Information - 1 row, 3 columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col">

@@ -412,7 +412,7 @@ const AllProperties = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <div className="px-10 my-10 py-10 max-[432px]:px-5 max-[432px]:py-10 mx-10 bg-gray-950">
+      <div className="px-10 my-10 py-10 max-[432px]:px-5 max-[432px]:py-10 mx-10 bg-gray-900">
         <h1 className="text-4xl font-bold mb-4 max-[432px]:text-2xl">All Properties</h1>
         <p className="text-gray-400 mb-8 max-[432px]:text-sm">
           Discover our comprehensive collection of properties available for purchase, rent, or investment.
