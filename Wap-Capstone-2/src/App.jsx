@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext'
+import ProtectedRoute from './components/Auth/ProtectedRoute'
+import PublicRoute from './components/Auth/PublicRoute'
 import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About'
 import Home from './components/Home/Home'
@@ -22,17 +24,60 @@ function App() {
           <Navbar />
           <main>
             <Routes>
+              {/* Public routes - accessible to everyone */}
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/properties" element={<AllProperties />} />
-              <Route path="/auctions" element={<LiveAuctions />} />
-              <Route path="/contact" element={<ContactForm />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/experience" element={<Expirence />} />
-              <Route path="/property/:id" element={<PropertyDetails />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/login" element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
+              } />
+              <Route path="/signup" element={
+                <PublicRoute>
+                  <Signup />
+                </PublicRoute>
+              } />
+              <Route path="/forgot-password" element={
+                <PublicRoute>
+                  <ForgotPassword />
+                </PublicRoute>
+              } />
+
+              {/* Protected routes - require authentication */}
+              <Route path="/about" element={
+                <ProtectedRoute>
+                  <About />
+                </ProtectedRoute>
+              } />
+              <Route path="/properties" element={
+                <ProtectedRoute>
+                  <AllProperties />
+                </ProtectedRoute>
+              } />
+              <Route path="/auctions" element={
+                <ProtectedRoute>
+                  <LiveAuctions />
+                </ProtectedRoute>
+              } />
+              <Route path="/contact" element={
+                <ProtectedRoute>
+                  <ContactForm />
+                </ProtectedRoute>
+              } />
+              <Route path="/services" element={
+                <ProtectedRoute>
+                  <Services />
+                </ProtectedRoute>
+              } />
+              <Route path="/experience" element={
+                <ProtectedRoute>
+                  <Expirence />
+                </ProtectedRoute>
+              } />
+              <Route path="/property/:id" element={
+                <ProtectedRoute>
+                  <PropertyDetails />
+                </ProtectedRoute>
+              } />
             </Routes>
           </main>
           <div className='px-10'>

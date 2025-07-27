@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -13,6 +13,10 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { login, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Get the page user was trying to access, or default to home
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +25,7 @@ const Login = () => {
       setError('');
       setLoading(true);
       await login(email, password);
-      navigate('/');
+      navigate(from, { replace: true });
     } catch (error) {
       setError('Failed to sign in. Please check your credentials.');
       console.error(error);
@@ -36,11 +40,10 @@ const Login = () => {
       console.log('Starting Google login...');
       await loginWithGoogle();
       console.log('Google login successful');
-      navigate('/');
+      navigate(from, { replace: true });
     } catch (error) {
       console.error('Google login error details:', error);
       
-      // Provide specific error messages based on error code
       if (error.code === 'auth/popup-closed-by-user') {
         setError('Sign-in was cancelled. Please try again.');
       } else if (error.code === 'auth/popup-blocked') {
@@ -71,6 +74,11 @@ const Login = () => {
               create a new account
             </Link>
           </p>
+          {from !== "/" && (
+            <p className="mt-2 text-center text-sm text-yellow-400">
+              Please sign in to access the requested page
+            </p>
+          )}
         </div>
         
         {error && (

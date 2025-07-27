@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -15,6 +15,10 @@ const Signup = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const { signup, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Get the page user was trying to access, or default to home
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +31,7 @@ const Signup = () => {
       setError('');
       setLoading(true);
       await signup(email, password);
-      navigate('/');
+      navigate(from, { replace: true });
     } catch (error) {
       setError('Failed to create an account. ' + error.message);
       console.error(error);
@@ -40,7 +44,7 @@ const Signup = () => {
       setError('');
       setLoading(true);
       await loginWithGoogle();
-      navigate('/');
+      navigate(from, { replace: true });
     } catch (error) {
       setError('Failed to sign up with Google.');
       console.error(error);
@@ -61,6 +65,11 @@ const Signup = () => {
               sign in to your existing account
             </Link>
           </p>
+          {from !== "/" && (
+            <p className="mt-2 text-center text-sm text-yellow-400">
+              Please create an account to access the requested page
+            </p>
+          )}
         </div>
         
         {error && (
