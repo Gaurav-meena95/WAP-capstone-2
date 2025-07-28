@@ -27,7 +27,7 @@ const Login = () => {
       await login(email, password);
       navigate(from, { replace: true });
     } catch (error) {
-      setError('Failed to sign in. Please check your credentials.');
+      setError('Failed to sign in. Please check your credentials or Signup First.');
       console.error(error);
     }
     setLoading(false);
