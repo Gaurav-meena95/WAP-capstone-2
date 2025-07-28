@@ -7,7 +7,6 @@ import About from './components/About/About'
 import Home from './components/Home/Home'
 import AllProperties from './components/AllProperties/AllProperties'
 import ContactForm from './components/ContactForm/ContactForm'
-import Expirence from './components/Expirence/Expirence'
 import PropertyDetails from './components/PropertyDetails/PropertyDetails'
 import Footer from './components/Footer/Footer'
 import Services from './components/Services/Services'
@@ -62,11 +61,7 @@ function App() {
                   <Services />
                 </ProtectedRoute>
               } />
-              <Route path="/experience" element={
-                <ProtectedRoute>
-                  <Expirence />
-                </ProtectedRoute>
-              } />
+
               <Route path="/property/:id" element={
                 <ProtectedRoute>
                   <PropertyDetails />

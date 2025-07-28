@@ -7,7 +7,6 @@ import {
 import Properties from "../Properties/Properties";
 
 const AllProperties = () => {
-  // Add useEffect to scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

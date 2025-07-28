@@ -5,7 +5,6 @@ import smart from "../../assets/smart.png";
 import unlock from "../../assets/unlock.png";
 import Properties from "../Properties/Properties";
 import Explore from "../Explore/Explore";
-import Expirence from "../Expirence/Expirence";
 import HomeFeatures from "./HomeFeatures";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +14,8 @@ const heroImages = [
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
   "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
   "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-  "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
 ];
 
 const Home = () => {
@@ -29,7 +29,7 @@ const Home = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
-    }, 3000);
+    }, 1500);
     return () => clearInterval(interval);
   }, []);
 
@@ -344,7 +344,6 @@ const Home = () => {
 
   return (
     <div className="text-white">
-      {/* Hero Section */}
       <div className="disply_flex flex-col md:flex-row mx-2 md:mx-10 bg-gray-900 border border-gray-600 phone rounded-sm p-2 md:p-6">
         <div className="text_cont w-full md:w-1/2">
           <div className="mx-2 md:mx-10 my-6 md:my-10">
@@ -366,7 +365,6 @@ const Home = () => {
               </button>
             ))}
           </div>
-          <Expirence />
         </div>
         <div className="w-full md:w-1/2 flex justify-center items-center mt-4 md:mt-0">
           <img

@@ -97,26 +97,26 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col">
               <label htmlFor="firstName" className="text-gray-300 mb-2">First Name *</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required className="bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors" />
+              <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required className="contactForm" />
             </div>
             <div className="flex flex-col">
               <label htmlFor="lastName" className="text-gray-300 mb-2">Last Name </label>
-              <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name"  className="bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors" />
+              <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name"  className="contactForm" />
             </div>
             <div className="flex flex-col">
               <label htmlFor="email" className="text-gray-300 mb-2">Email *</label>
-              <input type="email" id="email" name="email" placeholder="Enter your Email" required className="bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors" />
+              <input type="email" id="email" name="email" placeholder="Enter your Email" required className="contactForm" />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col">
               <label htmlFor="phone" className="text-gray-300 mb-2">Phone *</label>
-              <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required className="bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors" />
+              <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required className="contactForm" />
             </div>
             <div className="flex flex-col">
               <label htmlFor="inquiryType" className="text-gray-300 mb-2">Inquiry Type *</label>
-              <select id="inquiryType" name="inquiryType" required className="bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors">
+              <select id="inquiryType" name="inquiryType" required className="contactForm">
                 <option value="">Select Inquiry Type</option>
                 <option value="buying">Buying Property</option>
                 <option value="selling">Selling Property</option>
@@ -127,7 +127,7 @@ const ContactForm = () => {
             </div>
             <div className="flex flex-col">
               <label htmlFor="hearAboutUs" className="text-gray-300 mb-2">How Did You Hear About Us? *</label>
-              <select id="hearAboutUs" name="hearAboutUs" required className="bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors">
+              <select id="hearAboutUs" name="hearAboutUs" required className="contactForm">
                 <option value="">Select</option>
                 <option value="social">Social Media</option>
                 <option value="search">Search Engine</option>
@@ -140,7 +140,7 @@ const ContactForm = () => {
 
           <div className="flex flex-col">
             <label htmlFor="message" className="text-gray-300 mb-2">Message *</label>
-            <textarea id="message" name="message" rows="4" placeholder="Enter your message here..." required className="bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors resize-none"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message here..." required className="contactForm resize-none"></textarea>
           </div>
 
           <div className="flex md:flex-row justify-between items-center gap-4">

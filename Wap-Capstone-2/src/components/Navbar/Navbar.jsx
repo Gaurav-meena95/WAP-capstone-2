@@ -13,7 +13,7 @@ const Navbar = () => {
   const { currentUser, logout } = useAuth();
 
   const isActive = (path) => {
-    return location.pathname === path ? "text-blue-400" : "";
+    return location.pathname === path ? "text-purple-400" : "";
   };
 
   const handleLogout = async () => {

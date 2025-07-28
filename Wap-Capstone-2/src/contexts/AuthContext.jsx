@@ -26,7 +26,6 @@ export const AuthProvider = ({ children }) => {
 
   const loginWithGoogle = async () => {
     try {
-      console.log('Creating Google provider...');
       const provider = new GoogleAuthProvider();
 
       // Add custom parameters if needed
@@ -34,12 +33,9 @@ export const AuthProvider = ({ children }) => {
         prompt: 'select_account'
       });
 
-      console.log('Starting sign-in popup...');
       const result = await signInWithPopup(auth, provider);
-      console.log('Google sign-in successful:', result);
       return result;
     } catch (error) {
-      console.error('Google sign-in error in AuthContext:', error);
       throw error;
     }
   };
@@ -50,7 +46,6 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log('Auth state changed:', user);
       setCurrentUser(user);
       setLoading(false);
     });

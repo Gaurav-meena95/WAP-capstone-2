@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Explore from "../Explore/Explore";
-import Expirence from "../Expirence/Expirence";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Feature from "./Feature";
@@ -8,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 const About = () => {
   const navigate = useNavigate();
-  // Add useEffect to scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -157,7 +155,6 @@ const About = () => {
               trust of countless clients.
             </p>
           </div>
-          <Expirence />
         </div>
         <div className="w-full md:w-1/2 p-2 md:p-10 image-container">
           <img

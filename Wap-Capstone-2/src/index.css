@@ -76,23 +76,23 @@
     @apply w-full h-auto object-cover max-w-full;
   }
 
-  /* Mobile-specific image optimizations */
   .mobile-image {
     @apply max-[432px]:w-full max-[432px]:h-auto max-[432px]:object-contain;
   }
 
-  /* Image container for better alignment */
   .image-container {
     @apply flex items-center justify-center overflow-hidden;
   }
 
-  /* Aspect ratio containers */
   .aspect-square {
     @apply aspect-square w-full;
   }
 
   .aspect-video {
     @apply aspect-video w-full;
+  }
+  .contactForm{
+    @apply flex bg-[#1f232bd4] px-5 py-3 rounded-md border border-gray-600 focus:border-purple-600 focus:outline-none transition-colors
   }
 }
 
