@@ -4,8 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Properties = ({ propertyData }) => {
   const navigate = useNavigate();
-  // Remove this default property assignment:
-  // const property = propertyData || { ... };
 
   return (
     <div className='border_stl my-3 md:my-5 p-2 md:p-3 w-full sm:max-w-xs md:max-w-md lg:max-w-lg mx-auto'>
